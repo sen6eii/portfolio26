@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblat — Daniel Martínez</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #ffffff; --black-2: #f7f7f7; --black-3: #f2f2f2;
+  --surface: #ebebeb; --border: #e8e8e8; --border-2: #d8d8d8;
+  --muted: #c0c0c0; --text-4: #aaaaaa; --text-3: #777777;
+  --text-2: #555555; --text-1: #333333; --text-0: #111111;
+  --accent: #5E3BEE; --accent-2: #7B5CF0;
+  --accent-dim: rgba(94,59,238,0.08); --accent-border: rgba(94,59,238,0.2);
+  --white: #111111; --max: 1100px; --radius: 12px;
+}
+html.dark {
+  --black: #111111; --black-2: #161616; --black-3: #1c1c1c;
+  --surface: #242424; --border: #2a2a2a; --border-2: #383838;
+  --muted: #555555; --text-4: #555555; --text-3: #888888;
+  --text-2: #aaaaaa; --text-1: #cccccc; --text-0: #eeeeee; --white: #eeeeee;
+}
+html.dark nav { background: rgba(17,17,17,0.95); }
+html.dark nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text-0); font-family: 'Satoshi', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; cursor: none; }
+
+.cursor { position: fixed; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform 0.1s, background 0.2s; }
+.cursor-ring { position: fixed; width: 32px; height: 32px; border: 1px solid rgba(94,59,238,0.3); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.2s ease; }
+body::after { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 8000; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 24px 48px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
+nav.scrolled { padding: 16px 48px; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+.nav-logo { font-family: 'Satoshi', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text-0); letter-spacing: -0.01em; text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a { font-family: 'Satoshi', sans-serif; font-size: 0.82rem; letter-spacing: 0.04em; color: var(--text-2); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text-0); }
+.nav-cta { background: var(--accent) !important; color: #ffffff !important; padding: 8px 20px !important; border-radius: 6px !important; font-weight: 500 !important; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--accent-2) !important; }
+.nav-controls { display: flex; align-items: center; gap: 6px; }
+.btn-toggle { height: 32px; min-width: 32px; border-radius: 6px; border: 1px solid var(--border-2); background: transparent; color: var(--text-2); font-size: 0.68rem; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0 8px; transition: all 0.2s; }
+.btn-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.btn-theme { padding: 0; width: 32px; }
+.icon-moon, .icon-sun { display: flex; align-items: center; justify-content: center; }
+.icon-sun { display: none; }
+html.dark .icon-sun { display: flex; }
+html.dark .icon-moon { display: none; }
+
+.proj-hero { padding: 160px 48px 80px; max-width: calc(var(--max) + 96px); margin: 0 auto; }
+.proj-back { display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); text-decoration: none; margin-bottom: 56px; transition: color 0.2s; }
+.proj-back:hover { color: var(--accent); }
+.proj-tag { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.proj-title { font-family: 'Satoshi', sans-serif; font-size: clamp(56px, 9vw, 128px); font-weight: 800; line-height: 0.93; letter-spacing: -0.03em; color: var(--white); margin-bottom: 36px; }
+.proj-desc { font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--text-2); line-height: 1.75; max-width: 600px; margin-bottom: 56px; font-weight: 300; }
+.proj-meta { display: flex; border-top: 1px solid var(--border); padding-top: 32px; flex-wrap: wrap; }
+.meta-item { padding-right: 40px; margin-right: 40px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.meta-label { font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-4); margin-bottom: 6px; }
+.meta-value { font-family: 'Satoshi', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text-1); letter-spacing: -0.01em; }
+.project-status { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; border: 1px solid; }
+.status-live { color: #4ade80; border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.06); }
+.status-dev { color: #60a5fa; border-color: rgba(96,165,250,0.3); background: rgba(96,165,250,0.06); }
+.status-concept { color: var(--accent); border-color: var(--accent-border); background: var(--accent-dim); }
+.status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+.proj-content { padding: 80px 48px 120px; max-width: calc(var(--max) + 96px); margin: 0 auto; }
+.content-narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+.block { margin-bottom: 80px; }
+.block-title { font-family: 'Satoshi', sans-serif; font-size: clamp(22px, 2.8vw, 34px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 20px; }
+.block-text p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+.block-text p:last-child { margin-bottom: 0; }
+.block-image { margin: 0; }
+.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-grid { display: grid; gap: 12px; }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.block-grid figure { margin: 0; }
+.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+.block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 0; }
+.block-quote p { font-family: 'Satoshi', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 14px; }
+.block-quote cite { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-3); font-style: normal; }
+.block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); border: 1px solid var(--border-2); padding: 5px 12px; border-radius: 4px; transition: all 0.2s; }
+.tag:hover { border-color: var(--accent-border); color: var(--accent); }
+.block-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 80px 0; }
+.ph-block { background: var(--black-3); border: 1px dashed var(--border-2); border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--text-4); font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.ph-block .ph-icon { font-size: 1.8rem; opacity: 0.2; }
+.ph-img { aspect-ratio: 16/9; }
+.ph-vid { aspect-ratio: 16/9; }
+.ph-cell { aspect-ratio: 4/3; }
+
+.next-proj { background: var(--black-2); border-top: 1px solid var(--border); }
+.next-proj-link { display: flex; align-items: center; justify-content: space-between; max-width: calc(var(--max) + 96px); margin: 0 auto; padding: 80px 48px; text-decoration: none; color: inherit; }
+.next-proj-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-4); margin-bottom: 12px; }
+.next-proj-name { font-family: 'Satoshi', sans-serif; font-size: clamp(32px, 5vw, 64px); font-weight: 800; color: var(--white); letter-spacing: -0.03em; line-height: 1; transition: color 0.2s; }
+.next-proj-link:hover .next-proj-name { color: var(--accent); }
+.next-proj-arrow { font-size: 2.5rem; color: var(--text-3); transition: all 0.25s; }
+.next-proj-link:hover .next-proj-arrow { color: var(--accent); transform: translateX(8px); }
+
+footer { background: var(--black); border-top: 1px solid var(--border); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-left { display: flex; flex-direction: column; gap: 4px; }
+.footer-name { font-family: 'Satoshi', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text-1); }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer-links a { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  nav { padding: 20px 24px; } .nav-links { gap: 20px; }
+  .proj-hero { padding: 130px 24px 60px; }
+  .proj-content { padding: 60px 24px 80px; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .next-proj-link { padding: 60px 24px; flex-direction: column; align-items: flex-start; gap: 24px; }
+  footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .proj-meta { flex-direction: column; gap: 20px; }
+  .meta-item { border-right: none; padding-right: 0; margin-right: 0; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+  .meta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">DM<span>.</span></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+      <li><a href="index.html#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
+      <li><a href="index.html#sobre-mi" data-es="Sobre mí" data-en="About me">Sobre mí</a></li>
+      <li><a href="index.html#contacto" class="nav-cta" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="btn-toggle btn-lang" id="btnLang" aria-label="Switch language">EN</button>
+      <button class="btn-toggle btn-theme" id="btnTheme" aria-label="Toggle dark mode">
+        <span class="icon-moon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        <span class="icon-sun"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <div class="proj-tag">API · Web</div>
+  <h1 class="proj-title">Biblat</h1>
+  <p class="proj-desc">API pública de literatura latinoamericana con backoffice de administración y documentación técnica completa.</p>
+  <div class="proj-meta">
+    <div class="meta-item">
+      <div class="meta-label">Categoría</div>
+      <div class="meta-value">API · Web</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Año</div>
+      <div class="meta-value">2024</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Rol</div>
+      <div class="meta-value">Developer</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Estado</div>
+      <div class="meta-value">
+        <span class="project-status status-live"><span class="status-dot"></span>En línea</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="proj-content">
+
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title">El problema</h2>
+    <p>Describí el contexto y el desafío que motivó el proyecto. ¿Qué problema concreto estabas atacando? ¿Qué pasaba antes de que existiera esta solución?</p>
+    <p>Podés agregar tantos párrafos como necesites dentro de este bloque.</p>
+  </div>
+
+  <figure class="block block-image reveal">
+    <div class="ph-block ph-img">
+      <span class="ph-icon">🖼</span>
+      <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
+    </div>
+    <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
+    <figcaption>Caption opcional — borrar si no se necesita</figcaption>
+  </figure>
+
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title">La solución</h2>
+    <p>Explicá tu proceso de diseño o desarrollo. Qué decisiones tomaste y por qué.</p>
+    <p>Este es un buen lugar para hablar de iteraciones, aprendizajes o decisiones clave.</p>
+  </div>
+
+  <div class="block block-grid grid-2 reveal">
+    <figure>
+      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
+      <!-- <img src="img/screen-1.jpg" alt=""> -->
+      <figcaption>Caption opcional</figcaption>
+    </figure>
+    <figure>
+      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
+      <!-- <img src="img/screen-2.jpg" alt=""> -->
+      <figcaption>Caption opcional</figcaption>
+    </figure>
+  </div>
+
+  <blockquote class="block block-quote content-narrow reveal">
+    <p>"Escribí acá el insight o la frase que querés destacar."</p>
+    <cite>— Atribución opcional</cite>
+  </blockquote>
+
+  <div class="block block-grid grid-3 reveal">
+    <figure>
+      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
+      <!-- <img src="img/screen-a.jpg" alt=""> -->
+    </figure>
+    <figure>
+      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
+      <!-- <img src="img/screen-b.jpg" alt=""> -->
+    </figure>
+    <figure>
+      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
+      <!-- <img src="img/screen-c.jpg" alt=""> -->
+    </figure>
+  </div>
+
+  <div class="block block-video reveal">
+    <div class="ph-block ph-vid">
+      <span class="ph-icon">▶</span>
+      <span>Video — activar opción A (Vimeo) o B (archivo local) abajo</span>
+    </div>
+    <!--
+    <div class="video-embed">
+      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    -->
+    <!--
+    <video controls>
+      <source src="video/tu-video.mp4" type="video/mp4">
+    </video>
+    -->
+  </div>
+
+  <div class="block block-tags content-narrow reveal">
+    <span class="tag">Node.js</span>
+    <span class="tag">Express</span>
+    <span class="tag">Supabase</span>
+    <span class="tag">JavaScript</span>
+  </div>
+
+</main>
+
+<section class="next-proj">
+  <a href="proyecto-lendit.html" class="next-proj-link">
+    <div>
+      <div class="next-proj-label">Siguiente proyecto</div>
+      <div class="next-proj-name">Lendit</div>
+    </div>
+    <span class="next-proj-arrow">→</span>
+  </a>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-name">Daniel Martínez</div>
+    <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
+  </div>
+  <div class="footer-links">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Behance</a>
+    <a href="#">Email</a>
+  </div>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
+(function animRing() { rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animRing); })();
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2.5)'; ring.style.transform = 'translate(-50%,-50%) scale(1.4)'; ring.style.borderColor = 'rgba(94,59,238,0.7)'; });
+  el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.borderColor = 'rgba(94,59,238,0.3)'; });
+});
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach(r => observer.observe(r));
+document.getElementById('btnTheme').addEventListener('click', () => { document.documentElement.classList.toggle('dark'); });
+let currentLang = 'es';
+const btnLang = document.getElementById('btnLang');
+function applyLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.documentElement.lang = lang;
+  btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
+}
+btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
+</script>
+</body>
+</html>
