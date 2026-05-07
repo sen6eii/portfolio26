@@ -77,13 +77,13 @@ html.dark .icon-moon { display: none; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
 .block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
 .block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
-.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
@@ -161,27 +161,27 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 </nav>
 
 <header class="proj-hero">
-  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <a href="index.html" class="proj-back" data-es="← Volver al portfolio" data-en="← Back to portfolio">← Volver al portfolio</a>
   <div class="proj-tag">API · Web</div>
   <h1 class="proj-title">Biblat</h1>
-  <p class="proj-desc">API pública de literatura latinoamericana con backoffice de administración y documentación técnica completa.</p>
+  <p class="proj-desc" data-es="API REST pública y gratuita de literatura latinoamericana. Libros, autores y categorías de siete países, con búsqueda full-text en español, documentación Swagger y backoffice de administración. Construida porque no existía ninguna." data-en="Free, public REST API for Latin American literature. Books, authors, and categories from seven countries, with full-text search in Spanish, Swagger documentation, and an admin backoffice. Built because nothing like it existed.">API REST pública y gratuita de literatura latinoamericana. Libros, autores y categorías de siete países, con búsqueda full-text en español, documentación Swagger y backoffice de administración. Construida porque no existía ninguna.</p>
   <div class="proj-meta">
     <div class="meta-item">
-      <div class="meta-label">Categoría</div>
+      <div class="meta-label" data-es="Categoría" data-en="Category">Categoría</div>
       <div class="meta-value">API · Web</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Año</div>
+      <div class="meta-label" data-es="Año" data-en="Year">Año</div>
       <div class="meta-value">2024</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Rol</div>
+      <div class="meta-label" data-es="Rol" data-en="Role">Rol</div>
       <div class="meta-value">Developer</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Estado</div>
+      <div class="meta-label" data-es="Estado" data-en="Status">Estado</div>
       <div class="meta-value">
-        <span class="project-status status-live"><span class="status-dot"></span>En línea</span>
+        <span class="project-status status-live"><span class="status-dot"></span><span data-es="En línea" data-en="Live">En línea</span></span>
       </div>
     </div>
   </div>
@@ -190,9 +190,9 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <main class="proj-content">
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">El problema</h2>
-    <p>Describí el contexto y el desafío que motivó el proyecto. ¿Qué problema concreto estabas atacando? ¿Qué pasaba antes de que existiera esta solución?</p>
-    <p>Podés agregar tantos párrafos como necesites dentro de este bloque.</p>
+    <h2 class="block-title" data-es="El problema era la ausencia" data-en="The problem was absence">El problema era la ausencia</h2>
+    <p data-es="Existen grandes bases de datos de libros — Open Library, Google Books, Goodreads — pero ninguna pensada para quien necesita consumir datos de literatura latinoamericana de forma programática, en español, sin fricciones y sin costo. No hay una API REST pública y regional para ese caso de uso." data-en="Large book databases exist — Open Library, Google Books, Goodreads — but none designed for those who need to consume Latin American literature data programmatically, in Spanish, without friction and at no cost. There's no public, regional REST API for that use case.">Existen grandes bases de datos de libros — Open Library, Google Books, Goodreads — pero ninguna pensada para quien necesita consumir datos de literatura latinoamericana de forma programática, en español, sin fricciones y sin costo. No hay una API REST pública y regional para ese caso de uso.</p>
+    <p data-es="Biblat resuelve esa ausencia. Es una API de solo lectura, gratuita y sin autenticación para el consumidor, que cubre siete literaturas nacionales: argentina, mexicana, colombiana, uruguaya, chilena, peruana y latinoamericana en general." data-en="Biblat fills that gap. It's a read-only, free API without consumer authentication, covering seven national literatures: Argentine, Mexican, Colombian, Uruguayan, Chilean, Peruvian, and Latin American in general.">Biblat resuelve esa ausencia. Es una API de solo lectura, gratuita y sin autenticación para el consumidor, que cubre siete literaturas nacionales: argentina, mexicana, colombiana, uruguaya, chilena, peruana y latinoamericana en general.</p>
   </div>
 
   <figure class="block block-image reveal">
@@ -201,71 +201,68 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
       <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
     </div>
     <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
-    <figcaption>Caption opcional — borrar si no se necesita</figcaption>
+    <figcaption data-es="Vista general del backoffice — administración de libros, autores y categorías con API key" data-en="Backoffice overview — book, author, and category management with API key authentication">Vista general del backoffice — administración de libros, autores y categorías con API key</figcaption>
   </figure>
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">La solución</h2>
-    <p>Explicá tu proceso de diseño o desarrollo. Qué decisiones tomaste y por qué.</p>
-    <p>Este es un buen lugar para hablar de iteraciones, aprendizajes o decisiones clave.</p>
+    <h2 class="block-title" data-es="Cómo funciona" data-en="How it works">Cómo funciona</h2>
+    <p data-es="Los datos se obtienen de Open Library mediante un scraper automatizado que consulta siete subjects regionales y los almacena en PostgreSQL vía Supabase. El scraper respeta un intervalo de 1000ms entre requests para no saturar la fuente." data-en="Data is sourced from Open Library via an automated scraper that queries seven regional subjects and stores them in PostgreSQL via Supabase. The scraper respects a 1000ms interval between requests to avoid overloading the source.">Los datos se obtienen de Open Library mediante un scraper automatizado que consulta siete subjects regionales y los almacena en PostgreSQL vía Supabase. El scraper respeta un intervalo de 1000ms entre requests para no saturar la fuente.</p>
+    <p data-es='La API expone endpoints de solo lectura para cualquier consumidor: listar libros paginados, buscar por título o autor con full-text en español —indexado con GIN en PostgreSQL—, filtrar por categoría, ISBN o autor, y consultar listas de autores y categorías únicos. Las operaciones de escritura requieren API key y son exclusivas del backoffice de administración.' data-en='The API exposes read-only endpoints for any consumer: list paginated books, search by title or author with full-text in Spanish —indexed with GIN in PostgreSQL—, filter by category, ISBN, or author, and query lists of unique authors and categories. Write operations require an API key and are exclusive to the admin backoffice.'>La API expone endpoints de solo lectura para cualquier consumidor: listar libros paginados, buscar por título o autor con full-text en español —indexado con GIN en PostgreSQL—, filtrar por categoría, ISBN o autor, y consultar listas de autores y categorías únicos. Las operaciones de escritura requieren API key y son exclusivas del backoffice de administración.</p>
   </div>
 
   <div class="block block-grid grid-2 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Documentación Swagger — endpoints disponibles con ejemplos de request y response" data-en="Swagger documentation — available endpoints with request and response examples">Documentación Swagger — endpoints disponibles con ejemplos de request y response</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Backoffice — CRUD completo de libros protegido por API key" data-en="Backoffice — complete book CRUD protected by API key">Backoffice — CRUD completo de libros protegido por API key</figcaption>
     </figure>
   </div>
 
   <blockquote class="block block-quote content-narrow reveal">
-    <p>"Escribí acá el insight o la frase que querés destacar."</p>
-    <cite>— Atribución opcional</cite>
+    <p data-es="&quot;El primer paso fue constatar que no existía nada parecido. El segundo fue construirlo.&quot;" data-en="&quot;The first step was confirming that nothing like it existed. The second was building it.&quot;">"El primer paso fue constatar que no existía nada parecido. El segundo fue construirlo."</p>
+    <cite data-es="— Biblat · API de literatura latinoamericana" data-en="— Biblat · Latin American literature API">— Biblat · API de literatura latinoamericana</cite>
   </blockquote>
 
   <div class="block block-grid grid-3 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <figcaption data-es="Respuesta del endpoint /v1/books — estructura paginada con data y meta" data-en="Response from the /v1/books endpoint — paginated structure with data and meta">Respuesta del endpoint /v1/books — estructura paginada con data y meta</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <figcaption data-es="Búsqueda full-text — índice GIN en PostgreSQL optimizado para español" data-en="Full-text search — GIN index in PostgreSQL optimized for Spanish">Búsqueda full-text — índice GIN en PostgreSQL optimizado para español</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
       <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <figcaption data-es="Scraper — pipeline de ingesta desde Open Library con rate limiting integrado" data-en="Scraper — ingestion pipeline from Open Library with built-in rate limiting">Scraper — pipeline de ingesta desde Open Library con rate limiting integrado</figcaption>
     </figure>
   </div>
 
-  <div class="block block-video reveal">
-    <div class="ph-block ph-vid">
-      <span class="ph-icon">▶</span>
-      <span>Video — activar opción A (Vimeo) o B (archivo local) abajo</span>
-    </div>
-    <!--
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    -->
-    <!--
-    <video controls>
-      <source src="video/tu-video.mp4" type="video/mp4">
-    </video>
-    -->
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title" data-es="Stack y arquitectura" data-en="Stack and architecture">Stack y arquitectura</h2>
+    <p data-es='Backend en Node.js con Express, base de datos PostgreSQL vía Supabase, documentación generada con Swagger UI en <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">/docs</code>, y rate limiting con express-rate-limit para proteger el servicio. El backoffice es HTML + CSS + JS vanilla, sin frameworks.' data-en='Node.js backend with Express, PostgreSQL database via Supabase, documentation generated with Swagger UI at <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">/docs</code>, and rate limiting with express-rate-limit to protect the service. The backoffice is vanilla HTML + CSS + JS, no frameworks.'>Backend en Node.js con Express, base de datos PostgreSQL vía Supabase, documentación generada con Swagger UI en <code style="font-family: 'DM Mono', monospace; font-size: 0.85em; color: var(--accent);">/docs</code>, y rate limiting con express-rate-limit para proteger el servicio. El backoffice es HTML + CSS + JS vanilla, sin frameworks.</p>
+    <p data-es='La API está desplegada en Railway. El backoffice corre en Vercel. La respuesta sigue una estructura consistente en todos los endpoints: <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">{ data, meta }</code> para listas y <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">{ error, code }</code> para errores.' data-en='The API is deployed on Railway. The backoffice runs on Vercel. The response follows a consistent structure across all endpoints: <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">{ data, meta }</code> for lists and <code style="font-family: &apos;DM Mono&apos;, monospace; font-size: 0.85em; color: var(--accent);">{ error, code }</code> for errors.'>La API está desplegada en Railway. El backoffice corre en Vercel. La respuesta sigue una estructura consistente en todos los endpoints: <code style="font-family: 'DM Mono', monospace; font-size: 0.85em; color: var(--accent);">{ data, meta }</code> para listas y <code style="font-family: 'DM Mono', monospace; font-size: 0.85em; color: var(--accent);">{ error, code }</code> para errores.</p>
+    <p data-es='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver API en vivo →</a>' data-en='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View live API →</a>'><!-- reemplazá # con la URL de la API o la documentación Swagger --><a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver API en vivo →</a></p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
     <span class="tag">Node.js</span>
     <span class="tag">Express</span>
+    <span class="tag">PostgreSQL</span>
     <span class="tag">Supabase</span>
     <span class="tag">JavaScript</span>
+    <span class="tag">REST API</span>
+    <span class="tag">Swagger</span>
+    <span class="tag">Web Scraping</span>
+    <span class="tag">Railway</span>
   </div>
 
 </main>
@@ -273,7 +270,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <section class="next-proj">
   <a href="proyecto-lendit.html" class="next-proj-link">
     <div>
-      <div class="next-proj-label">Siguiente proyecto</div>
+      <div class="next-proj-label" data-es="Siguiente proyecto" data-en="Next project">Siguiente proyecto</div>
       <div class="next-proj-name">Lendit</div>
     </div>
     <span class="next-proj-arrow">→</span>
@@ -286,10 +283,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -315,11 +312,12 @@ let currentLang = 'es';
 const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.querySelectorAll('[data-es]').forEach(el => { const text = el.dataset[lang]; if (text !== undefined) el.innerHTML = text; });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
 </script>
+<script src="js/image-helper.js"></script>
 </body>
 </html>

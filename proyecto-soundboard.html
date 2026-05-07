@@ -77,13 +77,13 @@ html.dark .icon-moon { display: none; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
 .block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
 .block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
-.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
@@ -161,27 +161,27 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 </nav>
 
 <header class="proj-hero">
-  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <a href="index.html" class="proj-back" data-es="← Volver al portfolio" data-en="← Back to portfolio">← Volver al portfolio</a>
   <div class="proj-tag">UX · Web</div>
   <h1 class="proj-title">Soundboard</h1>
-  <p class="proj-desc">Plataforma de moodboard para músicos. Un espacio visual para construir y comunicar la identidad sonora de un proyecto artístico.</p>
+  <p class="proj-desc" data-es="Herramienta de pensamiento para productores — un moodboard donde el audio es el ciudadano de primera clase. Marcás el segundo exacto que te inspira, organizás por vibe y tonalidad, y construís la dirección sonora de un proyecto antes de tocar una nota." data-en="Thinking tool for producers — a moodboard where audio is a first-class citizen. Mark the exact second that inspires you, organize by vibe and tonality, and build the sonic direction of a project before touching a single note.">Herramienta de pensamiento para productores — un moodboard donde el audio es el ciudadano de primera clase. Marcás el segundo exacto que te inspira, organizás por vibe y tonalidad, y construís la dirección sonora de un proyecto antes de tocar una nota.</p>
   <div class="proj-meta">
     <div class="meta-item">
-      <div class="meta-label">Categoría</div>
+      <div class="meta-label" data-es="Categoría" data-en="Category">Categoría</div>
       <div class="meta-value">UX · Web</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Año</div>
+      <div class="meta-label" data-es="Año" data-en="Year">Año</div>
       <div class="meta-value">2024</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Rol</div>
+      <div class="meta-label" data-es="Rol" data-en="Role">Rol</div>
       <div class="meta-value">UX Designer</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Estado</div>
+      <div class="meta-label" data-es="Estado" data-en="Status">Estado</div>
       <div class="meta-value">
-        <span class="project-status status-concept"><span class="status-dot"></span>Proyecto personal</span>
+        <span class="project-status status-concept"><span class="status-dot"></span><span data-es="Proyecto personal" data-en="Personal project">Proyecto personal</span></span>
       </div>
     </div>
   </div>
@@ -190,9 +190,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <main class="proj-content">
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">El problema</h2>
-    <p>Describí el contexto y el desafío que motivó el proyecto. ¿Qué problema concreto estabas atacando? ¿Qué pasaba antes de que existiera esta solución?</p>
-    <p>Podés agregar tantos párrafos como necesites dentro de este bloque.</p>
+    <h2 class="block-title" data-es="Las referencias viven en el lugar equivocado" data-en="References live in the wrong place">Las referencias viven en el lugar equivocado</h2>
+    <p data-es="Los productores guardan referencias en playlists con nombres crípticos, notas de voz tarareando ideas y capturas de pantalla de waveforms. El proceso creativo existe — el problema es que las herramientas no están hechas para él." data-en="Producers store references in playlists with cryptic names, voice memos humming ideas, and screenshots of waveforms. The creative process exists — the problem is that the tools weren't built for it.">Los productores guardan referencias en playlists con nombres crípticos, notas de voz tarareando ideas y capturas de pantalla de waveforms. El proceso creativo existe — el problema es que las herramientas no están hechas para él.</p>
+    <p data-es="Una playlist reproduce canciones enteras pero no te permite señalar los ocho segundos que realmente importan. Un doc con links no tiene tempo ni tonalidad. Una captura de pantalla de una waveform no suena. El resultado es que la dirección sonora de un proyecto vive fragmentada entre cinco aplicaciones distintas y la memoria del productor." data-en="A playlist plays full songs but doesn't let you pinpoint the eight seconds that actually matter. A document with links has no tempo or tonality. A screenshot of a waveform doesn't make a sound. The result is that the sonic direction of a project lives fragmented across five different apps and the producer's memory.">Una playlist reproduce canciones enteras pero no te permite señalar los ocho segundos que realmente importan. Un doc con links no tiene tempo ni tonalidad. Una captura de pantalla de una waveform no suena. El resultado es que la dirección sonora de un proyecto vive fragmentada entre cinco aplicaciones distintas y la memoria del productor.</p>
+    <p data-es="Ninguna de esas herramientas habla el idioma del audio." data-en="None of those tools speak the language of audio.">Ninguna de esas herramientas habla el idioma del audio.</p>
   </div>
 
   <figure class="block block-image reveal">
@@ -201,71 +202,65 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
       <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
     </div>
     <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
-    <figcaption>Caption opcional — borrar si no se necesita</figcaption>
+    <figcaption data-es="Vista general de un proyecto en Soundboard — referencias sonoras organizadas por vibe y tonalidad" data-en="General view of a Soundboard project — sonic references organized by vibe and tonality">Vista general de un proyecto en Soundboard — referencias sonoras organizadas por vibe y tonalidad</figcaption>
   </figure>
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">La solución</h2>
-    <p>Explicá tu proceso de diseño o desarrollo. Qué decisiones tomaste y por qué.</p>
-    <p>Este es un buen lugar para hablar de iteraciones, aprendizajes o decisiones clave.</p>
+    <h2 class="block-title" data-es="Audio como ciudadano de primera clase" data-en="Audio as a first-class citizen">Audio como ciudadano de primera clase</h2>
+    <p data-es="Soundboard es un moodboard sonoro. Subís un fragmento de audio, pegás un link de YouTube o SoundCloud, marcás el segundo exacto que te inspira — y lo dejás junto a todos los demás sonidos que definen el proyecto. Podés organizar por vibe, tempo y tonalidad. Podés escuchar y construir al mismo tiempo." data-en="Soundboard is a sonic moodboard. Upload an audio clip, paste a YouTube or SoundCloud link, mark the exact second that inspires you — and place it alongside all the other sounds that define the project. You can organize by vibe, tempo, and tonality. You can listen and build at the same time.">Soundboard es un moodboard sonoro. Subís un fragmento de audio, pegás un link de YouTube o SoundCloud, marcás el segundo exacto que te inspira — y lo dejás junto a todos los demás sonidos que definen el proyecto. Podés organizar por vibe, tempo y tonalidad. Podés escuchar y construir al mismo tiempo.</p>
+    <p data-es="No es una playlist. No es un doc de texto con links. Es el espacio donde la dirección sonora de un proyecto toma forma antes de que el productor abra su DAW." data-en="It's not a playlist. It's not a text document with links. It's the space where the sonic direction of a project takes shape before the producer opens their DAW.">No es una playlist. No es un doc de texto con links. Es el espacio donde la dirección sonora de un proyecto toma forma antes de que el productor abra su DAW.</p>
   </div>
 
   <div class="block block-grid grid-2 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Agregar referencia — upload de audio o link con marcador al segundo exacto" data-en="Add reference — audio upload or link with marker at the exact second">Agregar referencia — upload de audio o link con marcador al segundo exacto</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Panel del proyecto — filtros por tempo, tonalidad y vibe" data-en="Project panel — filters by tempo, tonality, and vibe">Panel del proyecto — filtros por tempo, tonalidad y vibe</figcaption>
     </figure>
   </div>
 
   <blockquote class="block block-quote content-narrow reveal">
-    <p>"Escribí acá el insight o la frase que querés destacar."</p>
-    <cite>— Atribución opcional</cite>
+    <p data-es="&quot;No es Pinterest para música. Es la herramienta de pensamiento que un productor usa antes de empezar a producir.&quot;" data-en="&quot;It's not Pinterest for music. It's the thinking tool a producer uses before they start producing.&quot;">"No es Pinterest para música. Es la herramienta de pensamiento que un productor usa antes de empezar a producir."</p>
+    <cite data-es="— Concepto central · Soundboard" data-en="— Core concept · Soundboard">— Concepto central · Soundboard</cite>
   </blockquote>
 
   <div class="block block-grid grid-3 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <figcaption data-es="Referencia expandida — waveform, notas y metadatos en un solo lugar" data-en="Expanded reference — waveform, notes, and metadata in one place">Referencia expandida — waveform, notas y metadatos en un solo lugar</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <figcaption data-es="Nuevo proyecto — configuración inicial de parámetros sonoros" data-en="New project — initial configuration of sonic parameters">Nuevo proyecto — configuración inicial de parámetros sonoros</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
       <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <figcaption data-es="Dashboard — todos los proyectos activos con su perfil sonoro" data-en="Dashboard — all active projects with their sonic profile">Dashboard — todos los proyectos activos con su perfil sonoro</figcaption>
     </figure>
   </div>
 
-  <div class="block block-video reveal">
-    <div class="ph-block ph-vid">
-      <span class="ph-icon">▶</span>
-      <span>Video — activar opción A (Vimeo) o B (archivo local) abajo</span>
-    </div>
-    <!--
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    -->
-    <!--
-    <video controls>
-      <source src="video/tu-video.mp4" type="video/mp4">
-    </video>
-    -->
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title" data-es="El proceso" data-en="The process">El proceso</h2>
+    <p data-es="El proyecto nació de la frustración de no encontrar la herramienta adecuada. El primer paso fue mapear cómo trabajan realmente los productores: qué guardan, dónde lo guardan y por qué ese proceso siempre termina en el mismo caos. De ahí surgió el concepto de referencia con marcador de tiempo — la unidad mínima de información que hace falta y que ninguna herramienta existente maneja bien." data-en="The project was born from the frustration of not finding the right tool. The first step was mapping how producers actually work: what they save, where they save it, and why that process always ends in the same chaos. That's where the concept of the time-stamped reference emerged — the minimum unit of information that's needed and that no existing tool handles well.">El proyecto nació de la frustración de no encontrar la herramienta adecuada. El primer paso fue mapear cómo trabajan realmente los productores: qué guardan, dónde lo guardan y por qué ese proceso siempre termina en el mismo caos. De ahí surgió el concepto de referencia con marcador de tiempo — la unidad mínima de información que hace falta y que ninguna herramienta existente maneja bien.</p>
+    <p data-es="El diseño fue desarrollado en Figma, con foco en una interfaz que no compita con el audio sino que lo complemente. La organización por vibe, tempo y tonalidad no es solo un filtro — es el vocabulario con el que los productores piensan cuando construyen un proyecto." data-en="The design was developed in Figma, focused on an interface that doesn't compete with audio but complements it. Organization by vibe, tempo, and tonality isn't just a filter — it's the vocabulary producers use when building a project.">El diseño fue desarrollado en Figma, con foco en una interfaz que no compita con el audio sino que lo complemente. La organización por vibe, tempo y tonalidad no es solo un filtro — es el vocabulario con el que los productores piensan cuando construyen un proyecto.</p>
+    <p data-es='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a>' data-en='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View project →</a>'><!-- reemplazá # con la URL del prototipo o del proyecto --><a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a></p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
     <span class="tag">Figma</span>
+    <span class="tag">UX Research</span>
+    <span class="tag">Product Design</span>
     <span class="tag">React</span>
     <span class="tag">JavaScript</span>
-    <span class="tag">CSS</span>
+    <span class="tag">Web Audio API</span>
   </div>
 
 </main>
@@ -273,7 +268,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <section class="next-proj">
   <a href="proyecto-biblat.html" class="next-proj-link">
     <div>
-      <div class="next-proj-label">Siguiente proyecto</div>
+      <div class="next-proj-label" data-es="Siguiente proyecto" data-en="Next project">Siguiente proyecto</div>
       <div class="next-proj-name">Biblat</div>
     </div>
     <span class="next-proj-arrow">→</span>
@@ -286,10 +281,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -315,11 +310,12 @@ let currentLang = 'es';
 const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.querySelectorAll('[data-es]').forEach(el => { const text = el.dataset[lang]; if (text !== undefined) el.innerHTML = text; });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
 </script>
+<script src="js/image-helper.js"></script>
 </body>
 </html>

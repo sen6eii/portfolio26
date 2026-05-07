@@ -241,7 +241,7 @@ html.dark .icon-moon { display: none; }
   line-height: 1.02;
   letter-spacing: -0.03em;
   color: var(--white);
-  max-width: 820px;
+  max-width: 1100px;
   margin-bottom: 28px;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.4s forwards;
@@ -392,8 +392,8 @@ section {
 
 .project-card:hover {
   border-color: var(--accent-border);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
 .project-card.featured {
@@ -622,6 +622,26 @@ section {
   font-size: 0.83rem;
   color: var(--text-3);
   line-height: 1.65;
+}
+
+.service-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.service-tool {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  padding: 3px 8px;
+  border-radius: 3px;
 }
 
 /* ABOUT */
@@ -882,8 +902,10 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow" data-es="Hola, soy Dani Martínez 👋" data-en="Hi, I'm Dani Martínez 👋">Hola, soy Dani Martínez 👋</div>
-  <h1 class="hero-title" data-es="Construyo productos digitales que resuelven problemas <span class='accent'>reales.</span>" data-en="I build digital products that solve <span class='accent'>real problems.</span>">
-    Construyo productos digitales que resuelven problemas <span class="accent">reales.</span>
+  <h1 class="hero-title" data-es="Construyo productos<br>digitales que resuelven<br>problemas <span class='accent'>reales.</span>" data-en="I build digital products<br>that solve <span class='accent'>real problems.</span>">
+    Construyo productos<br>
+    digitales que resuelven<br>
+    problemas <span class="accent">reales.</span>
   </h1>
   <p class="hero-sub" data-es="Diseñador Digital y Frontend Developer con visión de producto. Trabajo en la intersección entre la estética, la tecnología y el negocio." data-en="Digital Designer and Frontend Developer with a product mindset. I work at the intersection of aesthetics, technology, and business.">
     Diseñador Digital y Frontend Developer con visión de producto. Trabajo en la intersección entre la estética, la tecnología y el negocio.
@@ -908,7 +930,7 @@ footer {
   <div class="projects-grid">
 
     <!-- Vigía — featured -->
-    <a class="project-card featured reveal" href="#">
+    <a class="project-card featured reveal" href="proyecto-vigia.html">
       <div class="project-img">
         <div class="project-img-placeholder">
           <span class="placeholder-icon">🛡️</span>
@@ -928,7 +950,7 @@ footer {
     </a>
 
     <!-- Totem Café -->
-    <a class="project-card reveal" href="#">
+    <a class="project-card reveal" href="proyecto-totem.html">
       <div class="project-img">
         <div class="project-img-placeholder">
           <span class="placeholder-icon">☕</span>
@@ -948,7 +970,7 @@ footer {
     </a>
 
     <!-- Soundboard -->
-    <a class="project-card reveal" href="#">
+    <a class="project-card reveal" href="proyecto-soundboard.html">
       <div class="project-img">
         <div class="project-img-placeholder">
           <span class="placeholder-icon">🎵</span>
@@ -968,7 +990,7 @@ footer {
     </a>
 
     <!-- Biblat -->
-    <a class="project-card reveal" href="#">
+    <a class="project-card reveal" href="proyecto-biblat.html">
       <div class="project-img">
         <div class="project-img-placeholder">
           <span class="placeholder-icon">📚</span>
@@ -988,7 +1010,7 @@ footer {
     </a>
 
     <!-- Lendit -->
-    <a class="project-card featured reveal" href="#" style="grid-template-columns: 1fr 1.2fr;">
+    <a class="project-card featured reveal" href="proyecto-lendit.html" style="grid-template-columns: 1fr 1.2fr;">
       <div class="project-info" style="padding: 40px 36px; display:flex; flex-direction:column; justify-content:center;">
         <div class="project-tag">Mobile · UX · UI Design</div>
         <h3 class="project-name">Lendit</h3>
@@ -1016,24 +1038,31 @@ footer {
     <div class="services-left reveal">
       <div class="section-label" data-es="Servicios" data-en="Services">Servicios</div>
       <h2 class="services-title" data-es="Qué puedo hacer por vos." data-en="What I can do for you.">Qué puedo hacer por vos.</h2>
-      <p class="services-sub" data-es="No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto." data-en="I don't separate design from development, or development from business. I build from problem to product.">No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto.</p>
+      <p class="services-sub" data-es="No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto — potenciado con IA, vibe coding y agentes que multiplican el ritmo sin sacrificar el criterio." data-en="I don't separate design from development, or development from business. I build from problem to product — powered by AI, vibe coding, and agents that multiply speed without sacrificing judgment.">No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto — potenciado con IA, vibe coding y agentes que multiplican el ritmo sin sacrificar el criterio.</p>
       <a href="#contacto" class="btn-primary" data-es="Hablemos →" data-en="Let's talk →">Hablemos →</a>
     </div>
     <div class="services-cards reveal">
       <div class="service-card">
         <span class="service-icon">⬡</span>
-        <div class="service-name">Product Design</div>
-        <div class="service-desc" data-es="Diseño de productos digitales desde el problema hasta la interfaz. UX, flujos, prototipos y sistemas de diseño orientados a resultados reales." data-en="Digital product design from problem to interface. UX, flows, prototypes, and design systems oriented toward real results.">Diseño de productos digitales desde el problema hasta la interfaz. UX, flujos, prototipos y sistemas de diseño orientados a resultados reales.</div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">⌨</span>
-        <div class="service-name">Frontend Development</div>
-        <div class="service-desc" data-es="Desarrollo de interfaces con React, Vue y JavaScript. Código limpio, responsive y orientado a la experiencia del usuario." data-en="Interface development with React, Vue, and JavaScript. Clean, responsive code focused on user experience.">Desarrollo de interfaces con React, Vue y JavaScript. Código limpio, responsive y orientado a la experiencia del usuario.</div>
+        <div class="service-name" data-es="Diseño & Desarrollo de Producto" data-en="Product Design & Development">Diseño & Desarrollo de Producto</div>
+        <div class="service-desc" data-es="Del problema al producto terminado. Diseño la UX, prototipo en Figma, construyo la interfaz y la deployeo — con IA y vibe coding como parte real del flujo, no como complemento." data-en="From problem to finished product. I design the UX, prototype in Figma, build the interface, and deploy it — with AI and vibe coding as a real part of the workflow, not an afterthought.">Del problema al producto terminado. Diseño la UX, prototipo en Figma, construyo la interfaz y la deployeo — con IA y vibe coding como parte real del flujo, no como complemento.</div>
+        <div class="service-tools">
+          <span class="service-tool">Claude</span>
+          <span class="service-tool">Figma</span>
+          <span class="service-tool">Cursor</span>
+          <span class="service-tool">React</span>
+          <span class="service-tool">Windsurf</span>
+        </div>
       </div>
       <div class="service-card">
         <span class="service-icon">◎</span>
         <div class="service-name" data-es="Consultoría Digital" data-en="Digital Consulting">Consultoría Digital</div>
-        <div class="service-desc" data-es="Análisis de productos existentes, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología con visión estratégica." data-en="Analysis of existing products, improvement proposals, and guidance on design and technology decisions with a strategic vision.">Análisis de productos existentes, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología con visión estratégica.</div>
+        <div class="service-desc" data-es="Análisis de productos, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología. Incluye evaluación de automatizaciones y agentes de IA aplicables a tu producto o proceso." data-en="Product analysis, improvement proposals, and guidance on design and technology decisions. Includes assessment of AI automations and agents applicable to your product or workflow.">Análisis de productos, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología. Incluye evaluación de automatizaciones y agentes de IA aplicables a tu producto o proceso.</div>
+        <div class="service-tools">
+          <span class="service-tool">Claude</span>
+          <span class="service-tool">n8n</span>
+          <span class="service-tool">Agentes IA</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1097,7 +1126,7 @@ footer {
     <div class="section-label" data-es="Contacto" data-en="Contact">Contacto</div>
     <h2 class="cta-title" data-es="¿Tenés una idea?<br><span class='accent'>Hablemos.</span>" data-en="Got an idea?<br><span class='accent'>Let's talk.</span>">¿Tenés una idea?<br><span class="accent">Hablemos.</span></h2>
     <p class="cta-sub" data-es="Estoy disponible para proyectos freelance, colaboraciones y consultoría." data-en="Available for freelance projects, collaborations, and consulting.">Estoy disponible para proyectos freelance, colaboraciones y consultoría.</p>
-    <a href="mailto:tu@email.com" class="btn-primary" style="font-size:1rem; padding: 16px 36px;" data-es="Escribime →" data-en="Get in touch →">Escribime →</a>
+    <a href="mailto:hola@danimartinez.dev" class="btn-primary" style="font-size:1rem; padding: 16px 36px;" data-es="Escribime →" data-en="Get in touch →">Escribime →</a>
   </div>
 </div>
 
@@ -1108,10 +1137,10 @@ footer {
     <div class="footer-copy" data-es="© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay" data-en="© 2026 · Digital Designer & Frontend Developer · Montevideo, Uruguay">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -1179,7 +1208,8 @@ const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
   document.querySelectorAll('[data-es]').forEach(el => {
-    el.innerHTML = el.dataset[lang];
+    const text = el.dataset[lang];
+    if (text !== undefined) el.innerHTML = text;
   });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';

@@ -83,7 +83,7 @@ html.dark .icon-moon { display: none; }
 /* BLOQUE: IMAGEN */
 .block-image { margin: 0; }
 .block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 
 /* BLOQUE: GRILLA */
 .block-grid { display: grid; gap: 12px; }
@@ -91,7 +91,7 @@ html.dark .icon-moon { display: none; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
 .block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
-.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 
 /* BLOQUE: VIDEO */
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
@@ -185,27 +185,27 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
      HERO DEL PROYECTO — editá tag, title, desc y meta
 ════════════════════════════════════════════════ -->
 <header class="proj-hero">
-  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <a href="index.html" class="proj-back" data-es="← Volver al portfolio" data-en="← Back to portfolio">← Volver al portfolio</a>
   <div class="proj-tag">Product Design · Startup</div>
   <h1 class="proj-title">Vigía</h1>
-  <p class="proj-desc">Sistema de protección en tiempo real para adultos mayores frente a estafas telefónicas. Un producto construido desde cero, validado con usuarios reales y actualmente en fase beta.</p>
+  <p class="proj-desc" data-es="Sistema de protección en tiempo real para adultos mayores frente a estafas telefónicas. Un producto construido desde cero, validado con usuarios reales y actualmente en fase beta." data-en="Real-time protection system for the elderly against phone scams. A product built from scratch, validated with real users, and currently in private beta.">Sistema de protección en tiempo real para adultos mayores frente a estafas telefónicas. Un producto construido desde cero, validado con usuarios reales y actualmente en fase beta.</p>
   <div class="proj-meta">
     <div class="meta-item">
-      <div class="meta-label">Categoría</div>
+      <div class="meta-label" data-es="Categoría" data-en="Category">Categoría</div>
       <div class="meta-value">Product Design</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Año</div>
+      <div class="meta-label" data-es="Año" data-en="Year">Año</div>
       <div class="meta-value">2025</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Rol</div>
-      <div class="meta-value">Co-fundador · Product Designer</div>
+      <div class="meta-label" data-es="Rol" data-en="Role">Rol</div>
+      <div class="meta-value" data-es="Co-fundador · Product Designer" data-en="Co-founder · Product Designer">Co-fundador · Product Designer</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Estado</div>
+      <div class="meta-label" data-es="Estado" data-en="Status">Estado</div>
       <div class="meta-value">
-        <span class="project-status status-dev"><span class="status-dot"></span>En desarrollo</span>
+        <span class="project-status status-dev"><span class="status-dot"></span><span data-es="En desarrollo" data-en="In development">En desarrollo</span></span>
       </div>
     </div>
   </div>
@@ -215,10 +215,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <main class="proj-content">
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">Un problema que crece en silencio</h2>
-    <p>Las estafas telefónicas se convirtieron en el tercer delito más denunciado del Uruguay, con más de 25.000 casos registrados en 2024 y un crecimiento del 2.000% en la última década. Las pérdidas económicas superan a las generadas por rapiñas, y la gran mayoría de los casos nunca se denuncia.</p>
-    <p>El blanco más frecuente son adultos mayores con teléfono fijo. Las modalidades van desde el "cuento del tío" hasta la suplantación de organismos estatales y la clonación de voz con inteligencia artificial. Una población que confía, en un momento en que confiar puede costar todo.</p>
-    <p>Cuando el problema llegó a mi propia familia, entendí que no era un problema de educación — era un problema de infraestructura. No existía ninguna herramienta que actuara en el momento exacto en que ocurre la estafa.</p>
+    <h2 class="block-title" data-es="Un problema que crece en silencio" data-en="A problem growing in silence">Un problema que crece en silencio</h2>
+    <p data-es="Las estafas telefónicas se convirtieron en el tercer delito más denunciado del Uruguay, con más de 25.000 casos registrados en 2024 y un crecimiento del 2.000% en la última década. Las pérdidas económicas superan a las generadas por rapiñas, y la gran mayoría de los casos nunca se denuncia." data-en="Phone scams have become the third most reported crime in Uruguay, with over 25,000 cases registered in 2024 and 2,000% growth over the last decade. Economic losses exceed those from robberies, and the vast majority of cases are never reported.">Las estafas telefónicas se convirtieron en el tercer delito más denunciado del Uruguay, con más de 25.000 casos registrados en 2024 y un crecimiento del 2.000% en la última década. Las pérdidas económicas superan a las generadas por rapiñas, y la gran mayoría de los casos nunca se denuncia.</p>
+    <p data-es='El blanco más frecuente son adultos mayores con teléfono fijo. Las modalidades van desde el "cuento del tío" hasta la suplantación de organismos estatales y la clonación de voz con inteligencia artificial. Una población que confía, en un momento en que confiar puede costar todo.' data-en="The most frequent targets are elderly people with landlines. Methods range from the grandparent scam to government agency impersonation and AI-powered voice cloning. A population that trusts, at a moment when trust can cost everything.">El blanco más frecuente son adultos mayores con teléfono fijo. Las modalidades van desde el "cuento del tío" hasta la suplantación de organismos estatales y la clonación de voz con inteligencia artificial. Una población que confía, en un momento en que confiar puede costar todo.</p>
+    <p data-es="Cuando el problema llegó a mi propia familia, entendí que no era un problema de educación — era un problema de infraestructura. No existía ninguna herramienta que actuara en el momento exacto en que ocurre la estafa." data-en="When the problem reached my own family, I understood it wasn't a matter of education — it was a matter of infrastructure. No tool existed that could act at the exact moment the scam happens.">Cuando el problema llegó a mi propia familia, entendí que no era un problema de educación — era un problema de infraestructura. No existía ninguna herramienta que actuara en el momento exacto en que ocurre la estafa.</p>
   </div>
 
 
@@ -228,15 +228,15 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
       <span>Reemplazar con &lt;img src="img/vigia-overview.jpg"&gt;</span>
     </div>
     <!-- <img src="img/vigia-overview.jpg" alt="Vista general del sistema Vigía"> -->
-    <figcaption>Dashboard de Vigía — historial de llamadas con análisis de riesgo en tiempo real</figcaption>
+    <figcaption data-es="Dashboard de Vigía — historial de llamadas con análisis de riesgo en tiempo real" data-en="Vigía Dashboard — call history with real-time risk analysis">Dashboard de Vigía — historial de llamadas con análisis de riesgo en tiempo real</figcaption>
   </figure>
 
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">La restricción de diseño más importante</h2>
-    <p>Vigía intercepta las llamadas entrantes al teléfono fijo, las analiza en tiempo real y alerta al familiar si detecta riesgo. Si hay peligro, el familiar recibe una llamada a cualquier celular, escucha lo que está pasando y puede intervenir presionando una tecla. Sin aplicación. Sin smartphone. Sin internet en ese momento.</p>
-    <p>Pero el principio que guió cada decisión de diseño fue uno solo: el adulto mayor no cambia nada. El teléfono suena y se atiende exactamente igual que siempre. Toda la inteligencia opera de forma invisible. Esta restricción no era un detalle — era la diferencia entre un producto que se adopta y uno que no.</p>
-    <p>La solución fue validada antes del lanzamiento. El 75% de los encuestados afirmó que usaría el servicio para proteger a un familiar. El 86% declaró disposición a pagar. Hoy hay familias en lista de espera activa para acceder a la beta privada.</p>
+    <h2 class="block-title" data-es="La restricción de diseño más importante" data-en="The most important design constraint">La restricción de diseño más importante</h2>
+    <p data-es="Vigía intercepta las llamadas entrantes al teléfono fijo, las analiza en tiempo real y alerta al familiar si detecta riesgo. Si hay peligro, el familiar recibe una llamada a cualquier celular, escucha lo que está pasando y puede intervenir presionando una tecla. Sin aplicación. Sin smartphone. Sin internet en ese momento." data-en="Vigía intercepts incoming landline calls, analyzes them in real time, and alerts the family member if it detects risk. If there's danger, the family member receives a call on any mobile phone, hears what's happening, and can intervene by pressing a key. No app. No smartphone. No internet required at that moment.">Vigía intercepta las llamadas entrantes al teléfono fijo, las analiza en tiempo real y alerta al familiar si detecta riesgo. Si hay peligro, el familiar recibe una llamada a cualquier celular, escucha lo que está pasando y puede intervenir presionando una tecla. Sin aplicación. Sin smartphone. Sin internet en ese momento.</p>
+    <p data-es="Pero el principio que guió cada decisión de diseño fue uno solo: el adulto mayor no cambia nada. El teléfono suena y se atiende exactamente igual que siempre. Toda la inteligencia opera de forma invisible. Esta restricción no era un detalle — era la diferencia entre un producto que se adopta y uno que no." data-en="But the principle that guided every design decision was one: the elderly person changes nothing. The phone rings and is answered exactly as always. All the intelligence operates invisibly. This constraint wasn't a detail — it was the difference between a product that gets adopted and one that doesn't.">Pero el principio que guió cada decisión de diseño fue uno solo: el adulto mayor no cambia nada. El teléfono suena y se atiende exactamente igual que siempre. Toda la inteligencia opera de forma invisible. Esta restricción no era un detalle — era la diferencia entre un producto que se adopta y uno que no.</p>
+    <p data-es="La solución fue validada antes del lanzamiento. El 75% de los encuestados afirmó que usaría el servicio para proteger a un familiar. El 86% declaró disposición a pagar. Hoy hay familias en lista de espera activa para acceder a la beta privada." data-en="The solution was validated before launch. 75% of respondents said they would use the service to protect a family member. 86% declared willingness to pay. Today there are families on an active waiting list to access the private beta.">La solución fue validada antes del lanzamiento. El 75% de los encuestados afirmó que usaría el servicio para proteger a un familiar. El 86% declaró disposición a pagar. Hoy hay familias en lista de espera activa para acceder a la beta privada.</p>
   </div>
 
 
@@ -247,7 +247,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
         <span>Screenshot — Dashboard principal</span>
       </div>
       <!-- <img src="img/vigia-dashboard.jpg" alt="Dashboard principal de Vigía"> -->
-      <figcaption>Vista del familiar — historial y estado en tiempo real</figcaption>
+      <figcaption data-es="Vista del familiar — historial y estado en tiempo real" data-en="Family member's view — real-time history and status">Vista del familiar — historial y estado en tiempo real</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell">
@@ -255,22 +255,22 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
         <span>Screenshot — Detalle de alerta</span>
       </div>
       <!-- <img src="img/vigia-alerta.jpg" alt="Detalle de una alerta de riesgo detectada"> -->
-      <figcaption>Detalle de llamada — análisis de riesgo y opciones de acción</figcaption>
+      <figcaption data-es="Detalle de llamada — análisis de riesgo y opciones de acción" data-en="Call detail — risk analysis and action options">Detalle de llamada — análisis de riesgo y opciones de acción</figcaption>
     </figure>
   </div>
 
 
   <blockquote class="block block-quote content-narrow reveal">
-    <p>"El adulto mayor no instala nada, no aprende nada, no cambia ningún hábito. El teléfono suena y se atiende exactamente igual que siempre."</p>
-    <cite>— Restricción de diseño #1 · Vigía</cite>
+    <p data-es="&quot;El adulto mayor no instala nada, no aprende nada, no cambia ningún hábito. El teléfono suena y se atiende exactamente igual que siempre.&quot;" data-en="&quot;The elderly person installs nothing, learns nothing, changes no habits. The phone rings and is answered exactly as always.&quot;">"El adulto mayor no instala nada, no aprende nada, no cambia ningún hábito. El teléfono suena y se atiende exactamente igual que siempre."</p>
+    <cite data-es="— Restricción de diseño #1 · Vigía" data-en="— Design constraint #1 · Vigía">— Restricción de diseño #1 · Vigía</cite>
   </blockquote>
 
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">Mi rol en el proyecto</h2>
-    <p>Fui co-fundador del proyecto y responsable de producto: desde la investigación inicial hasta la arquitectura de la experiencia, el diseño del sistema y la construcción del dashboard.</p>
-    <p>El proceso comenzó con investigación de mercado y entrevistas con usuarios. Definí la propuesta de valor, el flujo completo de la experiencia y los principios de diseño que guían cada decisión de producto. Diseñé el dashboard mobile-first en Figma y lo desarrollé en producción. También lideré la arquitectura técnica del sistema de detección y alertas, coordinando con mi co-fundador en la integración de hardware.</p>
-    <p>El resultado es un sistema funcional end-to-end, construido en paralelo a mi trabajo de tiempo completo.</p>
+    <h2 class="block-title" data-es="Mi rol en el proyecto" data-en="My role in the project">Mi rol en el proyecto</h2>
+    <p data-es="Fui co-fundador del proyecto y responsable de producto: desde la investigación inicial hasta la arquitectura de la experiencia, el diseño del sistema y la construcción del dashboard." data-en="I co-founded the project and led the product: from initial research to experience architecture, system design, and dashboard development.">Fui co-fundador del proyecto y responsable de producto: desde la investigación inicial hasta la arquitectura de la experiencia, el diseño del sistema y la construcción del dashboard.</p>
+    <p data-es="El proceso comenzó con investigación de mercado y entrevistas con usuarios. Definí la propuesta de valor, el flujo completo de la experiencia y los principios de diseño que guían cada decisión de producto. Diseñé el dashboard mobile-first en Figma y lo desarrollé en producción. También lideré la arquitectura técnica del sistema de detección y alertas, coordinando con mi co-fundador en la integración de hardware." data-en="The process began with market research and user interviews. I defined the value proposition, the complete experience flow, and the design principles guiding every product decision. I designed the mobile-first dashboard in Figma and developed it for production. I also led the technical architecture of the detection and alert system, coordinating with my co-founder on hardware integration.">El proceso comenzó con investigación de mercado y entrevistas con usuarios. Definí la propuesta de valor, el flujo completo de la experiencia y los principios de diseño que guían cada decisión de producto. Diseñé el dashboard mobile-first en Figma y lo desarrollé en producción. También lideré la arquitectura técnica del sistema de detección y alertas, coordinando con mi co-fundador en la integración de hardware.</p>
+    <p data-es="El resultado es un sistema funcional end-to-end, construido en paralelo a mi trabajo de tiempo completo." data-en="The result is a functional end-to-end system, built in parallel with my full-time job.">El resultado es un sistema funcional end-to-end, construido en paralelo a mi trabajo de tiempo completo.</p>
   </div>
 
 
@@ -329,10 +329,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -375,11 +375,12 @@ let currentLang = 'es';
 const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.querySelectorAll('[data-es]').forEach(el => { const text = el.dataset[lang]; if (text !== undefined) el.innerHTML = text; });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
 </script>
+<script src="js/image-helper.js"></script>
 </body>
 </html>

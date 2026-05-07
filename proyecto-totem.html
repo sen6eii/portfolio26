@@ -77,13 +77,13 @@ html.dark .icon-moon { display: none; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
 .block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
 .block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
-.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
@@ -161,27 +161,27 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 </nav>
 
 <header class="proj-hero">
-  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <a href="index.html" class="proj-back" data-es="← Volver al portfolio" data-en="← Back to portfolio">← Volver al portfolio</a>
   <div class="proj-tag">UI Design · UX</div>
   <h1 class="proj-title">Totem Café</h1>
-  <p class="proj-desc">Interfaz de autoservicio diseñada para Palacio del Café, uno de los espacios gastronómicos más icónicos de Uruguay.</p>
+  <p class="proj-desc" data-es="Sistema de self-checkout diseñado para El Palacio del Café — una interfaz táctil pensada para funcionar bajo presión, en entornos de alto tránsito y sin depender de personal." data-en="Self-checkout system designed for El Palacio del Café — a touchscreen interface built to work under pressure, in high-traffic environments, and without staff dependency.">Sistema de self-checkout diseñado para El Palacio del Café — una interfaz táctil pensada para funcionar bajo presión, en entornos de alto tránsito y sin depender de personal.</p>
   <div class="proj-meta">
     <div class="meta-item">
-      <div class="meta-label">Categoría</div>
+      <div class="meta-label" data-es="Categoría" data-en="Category">Categoría</div>
       <div class="meta-value">UI Design · UX</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Año</div>
+      <div class="meta-label" data-es="Año" data-en="Year">Año</div>
       <div class="meta-value">2024</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Rol</div>
+      <div class="meta-label" data-es="Rol" data-en="Role">Rol</div>
       <div class="meta-value">UI/UX Designer</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Estado</div>
+      <div class="meta-label" data-es="Estado" data-en="Status">Estado</div>
       <div class="meta-value">
-        <span class="project-status status-concept"><span class="status-dot"></span>Proyecto académico</span>
+        <span class="project-status status-concept"><span class="status-dot"></span><span data-es="Proyecto académico" data-en="Academic project">Proyecto académico</span></span>
       </div>
     </div>
   </div>
@@ -189,132 +189,85 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
 <main class="proj-content">
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: TEXTO CON TÍTULO Y PÁRRAFOS
-       Usalo para contexto, problema, proceso o conclusión.
-       Podés duplicar este bloque cuantas veces necesites.
-  ───────────────────────────────────────────── -->
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">El problema</h2>
-    <p>Describí el contexto y el desafío que motivó el proyecto. ¿Qué problema concreto estabas atacando? ¿Qué pasaba antes de que existiera esta solución?</p>
-    <p>Podés agregar tantos párrafos como necesites dentro de este bloque.</p>
+    <h2 class="block-title" data-es="Un punto de venta sin punto de venta" data-en="A point of sale without a point of sale">Un punto de venta sin punto de venta</h2>
+    <p data-es="El Palacio del Café necesitaba operar en espacios de alto tránsito — centros comerciales, ferias gastronómicas, entornos corporativos — donde instalar una caja tradicional no siempre es viable y cada minuto de espera tiene un costo real. El brief fue concreto: diseñar la experiencia completa de self-checkout para un tótem interactivo que permitiera comprar café de forma rápida, autónoma y exclusivamente con medios digitales." data-en="El Palacio del Café needed to operate in high-traffic spaces — shopping malls, food festivals, corporate environments — where installing a traditional cash register isn't always viable and every minute of wait time has a real cost. The brief was concrete: design the complete self-checkout experience for an interactive kiosk that allowed buying coffee quickly, autonomously, and exclusively with digital payment methods.">El Palacio del Café necesitaba operar en espacios de alto tránsito — centros comerciales, ferias gastronómicas, entornos corporativos — donde instalar una caja tradicional no siempre es viable y cada minuto de espera tiene un costo real. El brief fue concreto: diseñar la experiencia completa de self-checkout para un tótem interactivo que permitiera comprar café de forma rápida, autónoma y exclusivamente con medios digitales.</p>
+    <p data-es="Sin personal en el punto de venta. Sin efectivo. Sin fricción." data-en="No staff at the point of sale. No cash. No friction.">Sin personal en el punto de venta. Sin efectivo. Sin fricción.</p>
   </div>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: IMAGEN SIMPLE
-       Reemplazá el placeholder por: <img src="img/tu-imagen.jpg" alt="descripción">
-       La <figcaption> es opcional — borrala si no la necesitás.
-  ───────────────────────────────────────────── -->
   <figure class="block block-image reveal">
     <div class="ph-block ph-img">
       <span class="ph-icon">🖼</span>
       <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
     </div>
     <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
-    <figcaption>Caption opcional — borrar si no se necesita</figcaption>
+    <figcaption data-es="Vista general del flujo — selección, personalización, pago digital y retiro automático" data-en="General flow overview — selection, customization, digital payment and automatic pickup">Vista general del flujo — selección, personalización, pago digital y retiro automático</figcaption>
   </figure>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: TEXTO (duplicar para cada sección)
-  ───────────────────────────────────────────── -->
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">La solución</h2>
-    <p>Explicá tu proceso de diseño o desarrollo. Qué decisiones tomaste y por qué.</p>
-    <p>Este es un buen lugar para hablar de iteraciones, aprendizajes o decisiones clave.</p>
+    <h2 class="block-title" data-es="El hardware como punto de partida" data-en="Hardware as the starting point">El hardware como punto de partida</h2>
+    <p data-es="El tótem no era un lienzo libre. Pantalla táctil en formato 3:4, POS integrado, dispensador automático: una superficie de interacción concreta y no negociable que definió cada decisión de layout desde el primer wireframe. Diseñar para ese hardware significaba descartar gestos complejos, columnas múltiples y cualquier patrón de interfaz que asumiera una pantalla diferente." data-en="The kiosk wasn't a blank canvas. A touchscreen in 3:4 format, integrated POS, automatic dispenser: a concrete, non-negotiable interaction surface that defined every layout decision from the first wireframe. Designing for that hardware meant ruling out complex gestures, multiple columns, and any interface pattern that assumed a different screen.">El tótem no era un lienzo libre. Pantalla táctil en formato 3:4, POS integrado, dispensador automático: una superficie de interacción concreta y no negociable que definió cada decisión de layout desde el primer wireframe. Diseñar para ese hardware significaba descartar gestos complejos, columnas múltiples y cualquier patrón de interfaz que asumiera una pantalla diferente.</p>
+    <p data-es="Las restricciones de presupuesto y mantenimiento sumaron otra capa: sin mecanismos físicos complejos, toda la inteligencia de la experiencia tenía que vivir en la pantalla. Eso no fue una limitación — fue el principio de diseño más importante del proyecto." data-en="Budget and maintenance constraints added another layer: no complex physical mechanisms — all the intelligence of the experience had to live on screen. That wasn't a limitation — it was the most important design principle of the project.">Las restricciones de presupuesto y mantenimiento sumaron otra capa: sin mecanismos físicos complejos, toda la inteligencia de la experiencia tenía que vivir en la pantalla. Eso no fue una limitación — fue el principio de diseño más importante del proyecto.</p>
   </div>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: GRILLA DE SCREENSHOTS — 2 COLUMNAS
-       Cambiá "grid-2" por "grid-3" para tres columnas.
-       Agregá o quitá <figure> según cuántas imágenes tenés.
-  ───────────────────────────────────────────── -->
   <div class="block block-grid grid-2 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Pantalla de selección — botones de gran formato y jerarquía visual clara" data-en="Selection screen — large-format buttons and clear visual hierarchy">Pantalla de selección — botones de gran formato y jerarquía visual clara</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Confirmación del pedido — estado visible durante todo el flujo" data-en="Order confirmation — status visible throughout the entire flow">Confirmación del pedido — estado visible durante todo el flujo</figcaption>
     </figure>
   </div>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: CITA / INSIGHT DESTACADO
-       La etiqueta <cite> es opcional.
-  ───────────────────────────────────────────── -->
   <blockquote class="block block-quote content-narrow reveal">
-    <p>"Escribí acá el insight o la frase que querés destacar."</p>
-    <cite>— Atribución opcional</cite>
+    <p data-es="&quot;En un sistema de self-checkout, cualquier paso innecesario no es un detalle de UX — es una barrera que ralentiza la fila y genera abandono.&quot;" data-en="&quot;In a self-checkout system, any unnecessary step isn't a UX detail — it's a barrier that slows the line and drives abandonment.&quot;">"En un sistema de self-checkout, cualquier paso innecesario no es un detalle de UX — es una barrera que ralentiza la fila y genera abandono."</p>
+    <cite data-es="— Principio de diseño · Totem Café" data-en="— Design principle · Totem Café">— Principio de diseño · Totem Café</cite>
   </blockquote>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: GRILLA DE SCREENSHOTS — 3 COLUMNAS
-       En mobile colapsa automáticamente a 2 columnas.
-  ───────────────────────────────────────────── -->
   <div class="block block-grid grid-3 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <figcaption data-es="Wireframe low-fi — estructura inicial del flujo" data-en="Lo-fi wireframe — initial flow structure">Wireframe low-fi — estructura inicial del flujo</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <figcaption data-es="Iteración intermedia — validación de jerarquía y componentes" data-en="Mid iteration — hierarchy and component validation">Iteración intermedia — validación de jerarquía y componentes</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
       <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <figcaption data-es="Pantalla final high-fi — versión lista para producción" data-en="Final hi-fi screen — production-ready version">Pantalla final high-fi — versión lista para producción</figcaption>
     </figure>
   </div>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: VIDEO
-       Activá una opción y borrá el placeholder y la otra.
-       OPCIÓN A — Vimeo: reemplazá VIMEO_ID (números en la URL del video)
-       OPCIÓN B — Archivo local: reemplazá la ruta del archivo
-  ───────────────────────────────────────────── -->
-  <div class="block block-video reveal">
-    <!-- PLACEHOLDER — borrar cuando uses la opción real -->
-    <div class="ph-block ph-vid">
-      <span class="ph-icon">▶</span>
-      <span>Video — activar opción A (Vimeo) o B (archivo local) abajo</span>
-    </div>
-    <!-- OPCIÓN A: Vimeo -->
-    <!--
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    -->
-    <!-- OPCIÓN B: Archivo local -->
-    <!--
-    <video controls>
-      <source src="video/tu-video.mp4" type="video/mp4">
-    </video>
-    -->
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title" data-es="Simplificar sin perder claridad" data-en="Simplify without losing clarity">Simplificar sin perder claridad</h2>
+    <p data-es="La decisión más difícil fue organizar la jerarquía entre los cuatro momentos del flujo: selección, personalización, pago y retiro. En un contexto de alta demanda, la sobrecarga cognitiva no es teórica — ocurre cuando alguien está apurado, hay gente detrás esperando y la pantalla le presenta demasiadas decisiones a la vez." data-en="The hardest decision was organizing the hierarchy across the four moments of the flow: selection, customization, payment, and pickup. In a high-demand context, cognitive overload isn't theoretical — it happens when someone is in a hurry, there's a line behind them, and the screen presents too many decisions at once.">La decisión más difícil fue organizar la jerarquía entre los cuatro momentos del flujo: selección, personalización, pago y retiro. En un contexto de alta demanda, la sobrecarga cognitiva no es teórica — ocurre cuando alguien está apurado, hay gente detrás esperando y la pantalla le presenta demasiadas decisiones a la vez.</p>
+    <p data-es="La respuesta fue mantener el estado del pedido siempre visible y reducir las decisiones por pantalla al mínimo posible. Botones grandes, navegación estrictamente lineal, feedback constante en cada acción. El sistema tenía que generar confianza en sí mismo — porque no hay nadie al lado para resolverlo." data-en="The answer was keeping the order status always visible and reducing decisions per screen to the minimum possible. Large buttons, strictly linear navigation, constant feedback on every action. The system had to build confidence in itself — because there's no one nearby to help resolve it.">La respuesta fue mantener el estado del pedido siempre visible y reducir las decisiones por pantalla al mínimo posible. Botones grandes, navegación estrictamente lineal, feedback constante en cada acción. El sistema tenía que generar confianza en sí mismo — porque no hay nadie al lado para resolverlo.</p>
+    <p data-es='El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a>' data-en='The complete case study — wireframes, design decisions, interactive flow, and final screens — is published on Behance. <a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View full case study →</a>'>El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <!-- reemplazá # con la URL real de Behance --><a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a></p>
   </div>
 
-  <!-- ─────────────────────────────────────────────
-       BLOQUE: TAGS DE TECNOLOGÍAS
-  ───────────────────────────────────────────── -->
   <div class="block block-tags content-narrow reveal">
     <span class="tag">Figma</span>
     <span class="tag">UX Design</span>
     <span class="tag">UI Design</span>
     <span class="tag">Prototyping</span>
+    <span class="tag">Touchscreen UX</span>
+    <span class="tag">User Research</span>
   </div>
-
-  <!-- DIVISOR OPCIONAL — descomentar para usar -->
-  <!-- <hr class="block-divider"> -->
 
 </main>
 
 <section class="next-proj">
   <a href="proyecto-soundboard.html" class="next-proj-link">
     <div>
-      <div class="next-proj-label">Siguiente proyecto</div>
+      <div class="next-proj-label" data-es="Siguiente proyecto" data-en="Next project">Siguiente proyecto</div>
       <div class="next-proj-name">Soundboard</div>
     </div>
     <span class="next-proj-arrow">→</span>
@@ -327,10 +280,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -356,11 +309,12 @@ let currentLang = 'es';
 const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.querySelectorAll('[data-es]').forEach(el => { const text = el.dataset[lang]; if (text !== undefined) el.innerHTML = text; });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
 </script>
+<script src="js/image-helper.js"></script>
 </body>
 </html>

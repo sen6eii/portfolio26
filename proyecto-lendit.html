@@ -77,13 +77,13 @@ html.dark .icon-moon { display: none; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
 .block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; }
+.block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
 .block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
-.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; text-align: center; }
+.block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
@@ -161,27 +161,27 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 </nav>
 
 <header class="proj-hero">
-  <a href="index.html" class="proj-back">← Volver al portfolio</a>
+  <a href="index.html" class="proj-back" data-es="← Volver al portfolio" data-en="← Back to portfolio">← Volver al portfolio</a>
   <div class="proj-tag">Mobile · UX · UI Design</div>
   <h1 class="proj-title">Lendit</h1>
-  <p class="proj-desc">App para compartir bienes entre comunidades. Un diseño centrado en la confianza, la economía colaborativa y la reducción del consumo innecesario.</p>
+  <p class="proj-desc" data-es="Plataforma de préstamo colaborativo para comunidades cerradas — edificios, barrios, coworks, universidades. El diseño no resuelve cómo encontrar usuarios: resuelve cómo organizar los recursos que ya existen entre personas que ya se conocen." data-en="Collaborative lending platform for closed communities — buildings, neighborhoods, coworking spaces, universities. The design doesn't solve how to find users: it solves how to organize resources that already exist between people who already know each other.">Plataforma de préstamo colaborativo para comunidades cerradas — edificios, barrios, coworks, universidades. El diseño no resuelve cómo encontrar usuarios: resuelve cómo organizar los recursos que ya existen entre personas que ya se conocen.</p>
   <div class="proj-meta">
     <div class="meta-item">
-      <div class="meta-label">Categoría</div>
+      <div class="meta-label" data-es="Categoría" data-en="Category">Categoría</div>
       <div class="meta-value">Mobile · UX · UI Design</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Año</div>
+      <div class="meta-label" data-es="Año" data-en="Year">Año</div>
       <div class="meta-value">2024</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Rol</div>
+      <div class="meta-label" data-es="Rol" data-en="Role">Rol</div>
       <div class="meta-value">UX/UI Designer</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Estado</div>
+      <div class="meta-label" data-es="Estado" data-en="Status">Estado</div>
       <div class="meta-value">
-        <span class="project-status status-concept"><span class="status-dot"></span>Proyecto académico</span>
+        <span class="project-status status-concept"><span class="status-dot"></span><span data-es="Proyecto académico" data-en="Academic project">Proyecto académico</span></span>
       </div>
     </div>
   </div>
@@ -190,9 +190,9 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <main class="proj-content">
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">El problema</h2>
-    <p>Describí el contexto y el desafío que motivó el proyecto. ¿Qué problema concreto estabas atacando? ¿Qué pasaba antes de que existiera esta solución?</p>
-    <p>Podés agregar tantos párrafos como necesites dentro de este bloque.</p>
+    <h2 class="block-title" data-es="El problema no es encontrar usuarios" data-en="The problem is not finding users">El problema no es encontrar usuarios</h2>
+    <p data-es="En edificios, barrios privados, universidades y espacios de coworking hay objetos que se prestan constantemente. Pero ese intercambio se gestiona de forma informal: un mensaje en el grupo de WhatsApp, una planilla compartida que nadie actualiza, un acuerdo de palabra que depende de la memoria de todos." data-en="In apartment buildings, private neighborhoods, universities, and coworking spaces, objects are constantly being lent. But that exchange is managed informally: a message in the WhatsApp group, a shared spreadsheet no one updates, a verbal agreement that depends on everyone's memory.">En edificios, barrios privados, universidades y espacios de coworking hay objetos que se prestan constantemente. Pero ese intercambio se gestiona de forma informal: un mensaje en el grupo de WhatsApp, una planilla compartida que nadie actualiza, un acuerdo de palabra que depende de la memoria de todos.</p>
+    <p data-es="El problema no es que falten recursos — es que no hay una herramienta pensada para administrarlos. La confianza entre los miembros ya existe. Lo que falta es la infraestructura que la soporte." data-en="The problem isn't a lack of resources — it's that there's no tool designed to manage them. The trust between members already exists. What's missing is the infrastructure to support it.">El problema no es que falten recursos — es que no hay una herramienta pensada para administrarlos. La confianza entre los miembros ya existe. Lo que falta es la infraestructura que la soporte.</p>
   </div>
 
   <figure class="block block-image reveal">
@@ -201,71 +201,65 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
       <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
     </div>
     <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
-    <figcaption>Caption opcional — borrar si no se necesita</figcaption>
+    <figcaption data-es="Vista general de una comunidad — recursos disponibles, historial y estado de préstamos activos" data-en="Community overview — available resources, history, and active loan status">Vista general de una comunidad — recursos disponibles, historial y estado de préstamos activos</figcaption>
   </figure>
 
   <div class="block block-text content-narrow reveal">
-    <h2 class="block-title">La solución</h2>
-    <p>Explicá tu proceso de diseño o desarrollo. Qué decisiones tomaste y por qué.</p>
-    <p>Este es un buen lugar para hablar de iteraciones, aprendizajes o decisiones clave.</p>
+    <h2 class="block-title" data-es="No es un marketplace — es una comunidad" data-en="Not a marketplace — a community">No es un marketplace — es una comunidad</h2>
+    <p data-es="Wallapop y Getaround resuelven transacciones entre desconocidos. LendIt parte de un punto completamente distinto: los usuarios ya se conocen, ya comparten un espacio físico, y la confianza ya existe. El desafío no era construirla desde cero — era no destruirla con una experiencia mal diseñada." data-en="Wallapop and Getaround solve transactions between strangers. LendIt starts from a completely different point: users already know each other, already share a physical space, and trust already exists. The challenge wasn't building it from scratch — it was not destroying it with a poorly designed experience.">Wallapop y Getaround resuelven transacciones entre desconocidos. LendIt parte de un punto completamente distinto: los usuarios ya se conocen, ya comparten un espacio físico, y la confianza ya existe. El desafío no era construirla desde cero — era no destruirla con una experiencia mal diseñada.</p>
+    <p data-es="El sistema se organiza en grupos cerrados y moderados. Cada comunidad tiene su propio administrador, sus recursos visibles y su historial de préstamos. Los roles de usuario permiten adaptar la plataforma a contextos muy distintos: el encargado de un edificio tiene necesidades diferentes a las de una biblioteca universitaria o al coordinador de un cowork." data-en="The system is organized into closed, moderated groups. Each community has its own administrator, visible resources, and loan history. User roles allow the platform to adapt to very different contexts: a building manager has different needs than a university library or a cowork coordinator.">El sistema se organiza en grupos cerrados y moderados. Cada comunidad tiene su propio administrador, sus recursos visibles y su historial de préstamos. Los roles de usuario permiten adaptar la plataforma a contextos muy distintos: el encargado de un edificio tiene necesidades diferentes a las de una biblioteca universitaria o al coordinador de un cowork.</p>
   </div>
 
   <div class="block block-grid grid-2 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Gestión de recursos — inventario visible de objetos disponibles para préstamo" data-en="Resource management — visible inventory of items available for lending">Gestión de recursos — inventario visible de objetos disponibles para préstamo</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption>Caption opcional</figcaption>
+      <figcaption data-es="Panel de administración — control de grupos, roles y solicitudes pendientes" data-en="Admin panel — group management, roles, and pending requests">Panel de administración — control de grupos, roles y solicitudes pendientes</figcaption>
     </figure>
   </div>
 
   <blockquote class="block block-quote content-narrow reveal">
-    <p>"Escribí acá el insight o la frase que querés destacar."</p>
-    <cite>— Atribución opcional</cite>
+    <p data-es="&quot;El desafío no era construir confianza desde cero. Era no destruir la que ya existía.&quot;" data-en="&quot;The challenge wasn't building trust from scratch. It was not destroying the trust that already existed.&quot;">"El desafío no era construir confianza desde cero. Era no destruir la que ya existía."</p>
+    <cite data-es="— Principio de diseño · LendIt" data-en="— Design principle · LendIt">— Principio de diseño · LendIt</cite>
   </blockquote>
 
   <div class="block block-grid grid-3 reveal">
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
       <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <figcaption data-es="Flujo de solicitud — pedido de préstamo con fechas y confirmación del dueño" data-en="Request flow — loan request with dates and owner confirmation">Flujo de solicitud — pedido de préstamo con fechas y confirmación del dueño</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
       <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <figcaption data-es="Perfil de miembro — historial de actividad y reputación dentro de la comunidad" data-en="Member profile — activity history and reputation within the community">Perfil de miembro — historial de actividad y reputación dentro de la comunidad</figcaption>
     </figure>
     <figure>
       <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
       <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <figcaption data-es="Onboarding — creación y configuración de una nueva comunidad cerrada" data-en="Onboarding — creation and setup of a new closed community">Onboarding — creación y configuración de una nueva comunidad cerrada</figcaption>
     </figure>
   </div>
 
-  <div class="block block-video reveal">
-    <div class="ph-block ph-vid">
-      <span class="ph-icon">▶</span>
-      <span>Video — activar opción A (Vimeo) o B (archivo local) abajo</span>
-    </div>
-    <!--
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    -->
-    <!--
-    <video controls>
-      <source src="video/tu-video.mp4" type="video/mp4">
-    </video>
-    -->
+  <div class="block block-text content-narrow reveal">
+    <h2 class="block-title" data-es="El proceso" data-en="The process">El proceso</h2>
+    <p data-es="El proyecto no buscaba construir un MVP técnico inmediato. El objetivo era explorar cómo una experiencia digital podría optimizar la gestión de recursos compartidos dentro de comunidades locales — y para eso, el diseño necesitaba entender primero esos contextos." data-en="The project wasn't trying to build an immediate technical MVP. The goal was to explore how a digital experience could optimize shared resource management within local communities — and for that, the design first needed to understand those contexts.">El proyecto no buscaba construir un MVP técnico inmediato. El objetivo era explorar cómo una experiencia digital podría optimizar la gestión de recursos compartidos dentro de comunidades locales — y para eso, el diseño necesitaba entender primero esos contextos.</p>
+    <p data-es="Se construyeron user personas y user stories a partir de tres perfiles concretos: administradores de edificios, vecinos de barrios cerrados y encargados de instituciones educativas. Cada perfil tenía necesidades distintas pero compartía un mismo problema central: gestionar préstamos sin ninguna herramienta pensada para eso." data-en="User personas and user stories were built from three concrete profiles: building administrators, residents of private neighborhoods, and staff at educational institutions. Each profile had different needs but shared the same core problem: managing loans with no tool designed for that purpose.">Se construyeron user personas y user stories a partir de tres perfiles concretos: administradores de edificios, vecinos de barrios cerrados y encargados de instituciones educativas. Cada perfil tenía necesidades distintas pero compartía un mismo problema central: gestionar préstamos sin ninguna herramienta pensada para eso.</p>
+    <p data-es="El resultado es un sistema con grupos cerrados, administración comunitaria, visibilidad de recursos e historial de préstamos — diseñado específicamente para contextos donde el problema no es encontrar usuarios, sino organizar eficientemente lo que ya existe entre ellos." data-en="The result is a system with closed groups, community administration, resource visibility, and loan history — designed specifically for contexts where the problem isn't finding users, but efficiently organizing what already exists between them.">El resultado es un sistema con grupos cerrados, administración comunitaria, visibilidad de recursos e historial de préstamos — diseñado específicamente para contextos donde el problema no es encontrar usuarios, sino organizar eficientemente lo que ya existe entre ellos.</p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
     <span class="tag">Figma</span>
     <span class="tag">UX Research</span>
     <span class="tag">UI Design</span>
+    <span class="tag">Mobile Design</span>
     <span class="tag">Prototyping</span>
+    <span class="tag">User Personas</span>
   </div>
 
 </main>
@@ -273,7 +267,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 <section class="next-proj">
   <a href="proyecto-vigia.html" class="next-proj-link">
     <div>
-      <div class="next-proj-label">Siguiente proyecto</div>
+      <div class="next-proj-label" data-es="Siguiente proyecto" data-en="Next project">Siguiente proyecto</div>
       <div class="next-proj-name">Vigía</div>
     </div>
     <span class="next-proj-arrow">→</span>
@@ -286,10 +280,10 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <div class="footer-copy">© 2026 · Diseñador Digital & Frontend Developer · Montevideo, Uruguay</div>
   </div>
   <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Behance</a>
-    <a href="#">Email</a>
+    <a href="https://github.com/sen6eii" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/danielmartinezuy/" target="_blank">LinkedIn</a>
+    <a href="https://www.behance.net/dmartinezuy" target="_blank">Behance</a>
+    <a href="mailto:hola@danimartinez.dev">Email</a>
   </div>
 </footer>
 
@@ -315,11 +309,12 @@ let currentLang = 'es';
 const btnLang = document.getElementById('btnLang');
 function applyLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.dataset[lang]; });
+  document.querySelectorAll('[data-es]').forEach(el => { const text = el.dataset[lang]; if (text !== undefined) el.innerHTML = text; });
   document.documentElement.lang = lang;
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
 </script>
+<script src="js/image-helper.js"></script>
 </body>
 </html>
