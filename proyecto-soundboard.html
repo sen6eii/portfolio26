@@ -76,18 +76,18 @@ html.dark .icon-moon { display: none; }
 .block-text p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
-.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; aspect-ratio: 16/9; object-fit: cover; }
 .block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
-.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; aspect-ratio: 4/3; object-fit: cover; }
 .block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 0; }
+.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 48px 0; }
 .block-quote p { font-family: 'Satoshi', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 14px; }
 .block-quote cite { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-3); font-style: normal; }
 .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -197,11 +197,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
   </div>
 
   <figure class="block block-image reveal">
-    <div class="ph-block ph-img">
-      <span class="ph-icon">🖼</span>
-      <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
-    </div>
-    <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
+    <img src="img/vista.png" alt="Vista general de un proyecto en Soundboard">
     <figcaption data-es="Vista general de un proyecto en Soundboard — referencias sonoras organizadas por vibe y tonalidad" data-en="General view of a Soundboard project — sonic references organized by vibe and tonality">Vista general de un proyecto en Soundboard — referencias sonoras organizadas por vibe y tonalidad</figcaption>
   </figure>
 
@@ -211,19 +207,6 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <p data-es="No es una playlist. No es un doc de texto con links. Es el espacio donde la dirección sonora de un proyecto toma forma antes de que el productor abra su DAW." data-en="It's not a playlist. It's not a text document with links. It's the space where the sonic direction of a project takes shape before the producer opens their DAW.">No es una playlist. No es un doc de texto con links. Es el espacio donde la dirección sonora de un proyecto toma forma antes de que el productor abra su DAW.</p>
   </div>
 
-  <div class="block block-grid grid-2 reveal">
-    <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption data-es="Agregar referencia — upload de audio o link con marcador al segundo exacto" data-en="Add reference — audio upload or link with marker at the exact second">Agregar referencia — upload de audio o link con marcador al segundo exacto</figcaption>
-    </figure>
-    <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption data-es="Panel del proyecto — filtros por tempo, tonalidad y vibe" data-en="Project panel — filters by tempo, tonality, and vibe">Panel del proyecto — filtros por tempo, tonalidad y vibe</figcaption>
-    </figure>
-  </div>
-
   <blockquote class="block block-quote content-narrow reveal">
     <p data-es="&quot;No es Pinterest para música. Es la herramienta de pensamiento que un productor usa antes de empezar a producir.&quot;" data-en="&quot;It's not Pinterest for music. It's the thinking tool a producer uses before they start producing.&quot;">"No es Pinterest para música. Es la herramienta de pensamiento que un productor usa antes de empezar a producir."</p>
     <cite data-es="— Concepto central · Soundboard" data-en="— Core concept · Soundboard">— Concepto central · Soundboard</cite>
@@ -231,18 +214,15 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
   <div class="block block-grid grid-3 reveal">
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <img src="img/referencia expandida.png" alt="Referencia expandida">
       <figcaption data-es="Referencia expandida — waveform, notas y metadatos en un solo lugar" data-en="Expanded reference — waveform, notes, and metadata in one place">Referencia expandida — waveform, notas y metadatos en un solo lugar</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <img src="img/nuevo-proyecto.png" alt="Nuevo proyecto">
       <figcaption data-es="Nuevo proyecto — configuración inicial de parámetros sonoros" data-en="New project — initial configuration of sonic parameters">Nuevo proyecto — configuración inicial de parámetros sonoros</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
-      <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <img src="img/dashboard.png" alt="Dashboard">
       <figcaption data-es="Dashboard — todos los proyectos activos con su perfil sonoro" data-en="Dashboard — all active projects with their sonic profile">Dashboard — todos los proyectos activos con su perfil sonoro</figcaption>
     </figure>
   </div>
@@ -251,7 +231,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <h2 class="block-title" data-es="El proceso" data-en="The process">El proceso</h2>
     <p data-es="El proyecto nació de la frustración de no encontrar la herramienta adecuada. El primer paso fue mapear cómo trabajan realmente los productores: qué guardan, dónde lo guardan y por qué ese proceso siempre termina en el mismo caos. De ahí surgió el concepto de referencia con marcador de tiempo — la unidad mínima de información que hace falta y que ninguna herramienta existente maneja bien." data-en="The project was born from the frustration of not finding the right tool. The first step was mapping how producers actually work: what they save, where they save it, and why that process always ends in the same chaos. That's where the concept of the time-stamped reference emerged — the minimum unit of information that's needed and that no existing tool handles well.">El proyecto nació de la frustración de no encontrar la herramienta adecuada. El primer paso fue mapear cómo trabajan realmente los productores: qué guardan, dónde lo guardan y por qué ese proceso siempre termina en el mismo caos. De ahí surgió el concepto de referencia con marcador de tiempo — la unidad mínima de información que hace falta y que ninguna herramienta existente maneja bien.</p>
     <p data-es="El diseño fue desarrollado en Figma, con foco en una interfaz que no compita con el audio sino que lo complemente. La organización por vibe, tempo y tonalidad no es solo un filtro — es el vocabulario con el que los productores piensan cuando construyen un proyecto." data-en="The design was developed in Figma, focused on an interface that doesn't compete with audio but complements it. Organization by vibe, tempo, and tonality isn't just a filter — it's the vocabulary producers use when building a project.">El diseño fue desarrollado en Figma, con foco en una interfaz que no compita con el audio sino que lo complemente. La organización por vibe, tempo y tonalidad no es solo un filtro — es el vocabulario con el que los productores piensan cuando construyen un proyecto.</p>
-    <p data-es='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a>' data-en='<a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View project →</a>'><!-- reemplazá # con la URL del prototipo o del proyecto --><a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a></p>
+    <p data-es='<a href="https://soundboard-ten-black.vercel.app/" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a>' data-en='<a href="https://soundboard-ten-black.vercel.app/" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View project →</a>'><a href="https://soundboard-ten-black.vercel.app/" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver proyecto →</a></p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
