@@ -76,18 +76,18 @@ html.dark .icon-moon { display: none; }
 .block-text p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
-.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; aspect-ratio: 16/9; object-fit: cover; }
 .block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
-.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; aspect-ratio: 4/3; object-fit: cover; }
 .block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 0; }
+.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 48px 0; }
 .block-quote p { font-family: 'Satoshi', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 14px; }
 .block-quote cite { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-3); font-style: normal; }
 .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -196,11 +196,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
   </div>
 
   <figure class="block block-image reveal">
-    <div class="ph-block ph-img">
-      <span class="ph-icon">🖼</span>
-      <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
-    </div>
-    <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
+    <img src="img/vista-lendit.png" alt="Vista general de una comunidad en LendIt">
     <figcaption data-es="Vista general de una comunidad — recursos disponibles, historial y estado de préstamos activos" data-en="Community overview — available resources, history, and active loan status">Vista general de una comunidad — recursos disponibles, historial y estado de préstamos activos</figcaption>
   </figure>
 
@@ -210,19 +206,6 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <p data-es="El sistema se organiza en grupos cerrados y moderados. Cada comunidad tiene su propio administrador, sus recursos visibles y su historial de préstamos. Los roles de usuario permiten adaptar la plataforma a contextos muy distintos: el encargado de un edificio tiene necesidades diferentes a las de una biblioteca universitaria o al coordinador de un cowork." data-en="The system is organized into closed, moderated groups. Each community has its own administrator, visible resources, and loan history. User roles allow the platform to adapt to very different contexts: a building manager has different needs than a university library or a cowork coordinator.">El sistema se organiza en grupos cerrados y moderados. Cada comunidad tiene su propio administrador, sus recursos visibles y su historial de préstamos. Los roles de usuario permiten adaptar la plataforma a contextos muy distintos: el encargado de un edificio tiene necesidades diferentes a las de una biblioteca universitaria o al coordinador de un cowork.</p>
   </div>
 
-  <div class="block block-grid grid-2 reveal">
-    <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-1.jpg" alt=""> -->
-      <figcaption data-es="Gestión de recursos — inventario visible de objetos disponibles para préstamo" data-en="Resource management — visible inventory of items available for lending">Gestión de recursos — inventario visible de objetos disponibles para préstamo</figcaption>
-    </figure>
-    <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-2.jpg" alt=""> -->
-      <figcaption data-es="Panel de administración — control de grupos, roles y solicitudes pendientes" data-en="Admin panel — group management, roles, and pending requests">Panel de administración — control de grupos, roles y solicitudes pendientes</figcaption>
-    </figure>
-  </div>
-
   <blockquote class="block block-quote content-narrow reveal">
     <p data-es="&quot;El desafío no era construir confianza desde cero. Era no destruir la que ya existía.&quot;" data-en="&quot;The challenge wasn't building trust from scratch. It was not destroying the trust that already existed.&quot;">"El desafío no era construir confianza desde cero. Era no destruir la que ya existía."</p>
     <cite data-es="— Principio de diseño · LendIt" data-en="— Design principle · LendIt">— Principio de diseño · LendIt</cite>
@@ -230,18 +213,15 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
   <div class="block block-grid grid-3 reveal">
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <img src="img/pedido-prestamo.png" alt="Flujo de solicitud de préstamo">
       <figcaption data-es="Flujo de solicitud — pedido de préstamo con fechas y confirmación del dueño" data-en="Request flow — loan request with dates and owner confirmation">Flujo de solicitud — pedido de préstamo con fechas y confirmación del dueño</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <img src="img/perfil-miembro.png" alt="Perfil de miembro">
       <figcaption data-es="Perfil de miembro — historial de actividad y reputación dentro de la comunidad" data-en="Member profile — activity history and reputation within the community">Perfil de miembro — historial de actividad y reputación dentro de la comunidad</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
-      <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <img src="img/onboarding.png" alt="Onboarding">
       <figcaption data-es="Onboarding — creación y configuración de una nueva comunidad cerrada" data-en="Onboarding — creation and setup of a new closed community">Onboarding — creación y configuración de una nueva comunidad cerrada</figcaption>
     </figure>
   </div>
@@ -251,6 +231,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <p data-es="El proyecto no buscaba construir un MVP técnico inmediato. El objetivo era explorar cómo una experiencia digital podría optimizar la gestión de recursos compartidos dentro de comunidades locales — y para eso, el diseño necesitaba entender primero esos contextos." data-en="The project wasn't trying to build an immediate technical MVP. The goal was to explore how a digital experience could optimize shared resource management within local communities — and for that, the design first needed to understand those contexts.">El proyecto no buscaba construir un MVP técnico inmediato. El objetivo era explorar cómo una experiencia digital podría optimizar la gestión de recursos compartidos dentro de comunidades locales — y para eso, el diseño necesitaba entender primero esos contextos.</p>
     <p data-es="Se construyeron user personas y user stories a partir de tres perfiles concretos: administradores de edificios, vecinos de barrios cerrados y encargados de instituciones educativas. Cada perfil tenía necesidades distintas pero compartía un mismo problema central: gestionar préstamos sin ninguna herramienta pensada para eso." data-en="User personas and user stories were built from three concrete profiles: building administrators, residents of private neighborhoods, and staff at educational institutions. Each profile had different needs but shared the same core problem: managing loans with no tool designed for that purpose.">Se construyeron user personas y user stories a partir de tres perfiles concretos: administradores de edificios, vecinos de barrios cerrados y encargados de instituciones educativas. Cada perfil tenía necesidades distintas pero compartía un mismo problema central: gestionar préstamos sin ninguna herramienta pensada para eso.</p>
     <p data-es="El resultado es un sistema con grupos cerrados, administración comunitaria, visibilidad de recursos e historial de préstamos — diseñado específicamente para contextos donde el problema no es encontrar usuarios, sino organizar eficientemente lo que ya existe entre ellos." data-en="The result is a system with closed groups, community administration, resource visibility, and loan history — designed specifically for contexts where the problem isn't finding users, but efficiently organizing what already exists between them.">El resultado es un sistema con grupos cerrados, administración comunitaria, visibilidad de recursos e historial de préstamos — diseñado específicamente para contextos donde el problema no es encontrar usuarios, sino organizar eficientemente lo que ya existe entre ellos.</p>
+    <p data-es='El case study completo — flujos, wireframes, decisiones de diseño y prototipo interactivo — está publicado en Behance. <a href="https://www.behance.net/gallery/210281983/LendIt" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a>' data-en='The complete case study — flows, wireframes, design decisions, and interactive prototype — is published on Behance. <a href="https://www.behance.net/gallery/210281983/LendIt" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View full case study →</a>'>El case study completo — flujos, wireframes, decisiones de diseño y prototipo interactivo — está publicado en Behance. <a href="https://www.behance.net/gallery/210281983/LendIt" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a></p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
