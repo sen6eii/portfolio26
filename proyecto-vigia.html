@@ -82,7 +82,7 @@ html.dark .icon-moon { display: none; }
 
 /* BLOQUE: IMAGEN */
 .block-image { margin: 0; }
-.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; aspect-ratio: 16/9; object-fit: cover; }
 .block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 
 /* BLOQUE: GRILLA */
@@ -90,7 +90,7 @@ html.dark .icon-moon { display: none; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
-.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; aspect-ratio: 4/3; object-fit: cover; }
 .block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 
 /* BLOQUE: VIDEO */
@@ -99,7 +99,7 @@ html.dark .icon-moon { display: none; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
 
 /* BLOQUE: CITA */
-.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 0; }
+.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 48px 0; }
 .block-quote p { font-family: 'Satoshi', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 14px; }
 .block-quote cite { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-3); font-style: normal; }
 
@@ -117,6 +117,21 @@ html.dark .icon-moon { display: none; }
 .ph-img { aspect-ratio: 16/9; }
 .ph-vid { aspect-ratio: 16/9; }
 .ph-cell { aspect-ratio: 4/3; }
+
+/* BLOQUE: ACCESO MVP */
+.block-access { background: var(--black-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 56px; }
+.access-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: #4ade80; background: rgba(74,222,128,0.06); border: 1px solid rgba(74,222,128,0.3); padding: 4px 12px; border-radius: 99px; margin-bottom: 24px; }
+.access-title { font-family: 'Satoshi', sans-serif; font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 12px; }
+.access-desc { font-size: 0.95rem; color: var(--text-2); line-height: 1.75; max-width: 520px; margin-bottom: 32px; }
+.access-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.access-form input { flex: 1; min-width: 160px; height: 44px; background: var(--black); border: 1px solid var(--border-2); border-radius: 8px; padding: 0 16px; font-family: 'Satoshi', sans-serif; font-size: 0.9rem; color: var(--text-0); outline: none; transition: border-color 0.2s; }
+.access-form input:focus { border-color: var(--accent); }
+.access-form input::placeholder { color: var(--text-4); }
+.access-form button { height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 0 28px; font-family: 'Satoshi', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.access-form button:hover { background: var(--accent-2); }
+.access-note { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em; color: var(--text-4); margin-top: 14px; }
+.access-success { display: none; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: #4ade80; margin-top: 16px; }
+@media (max-width: 600px) { .block-access { padding: 32px 24px; } }
 
 /* SIGUIENTE PROYECTO */
 .next-proj { background: var(--black-2); border-top: 1px solid var(--border); }
@@ -223,11 +238,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
 
   <figure class="block block-image reveal">
-    <div class="ph-block ph-img">
-      <span class="ph-icon">🖼</span>
-      <span>Reemplazar con &lt;img src="img/vigia-overview.jpg"&gt;</span>
-    </div>
-    <!-- <img src="img/vigia-overview.jpg" alt="Vista general del sistema Vigía"> -->
+    <img src="img/vigia-overview.PNG" alt="Dashboard">
     <figcaption data-es="Dashboard de Vigía — historial de llamadas con análisis de riesgo en tiempo real" data-en="Vigía Dashboard — call history with real-time risk analysis">Dashboard de Vigía — historial de llamadas con análisis de riesgo en tiempo real</figcaption>
   </figure>
 
@@ -242,19 +253,11 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
   <div class="block block-grid grid-2 reveal">
     <figure>
-      <div class="ph-block ph-cell">
-        <span class="ph-icon">📱</span>
-        <span>Screenshot — Dashboard principal</span>
-      </div>
-      <!-- <img src="img/vigia-dashboard.jpg" alt="Dashboard principal de Vigía"> -->
+      <img src="img/vigia-dashboard.PNG" alt="Dashboard principal de Vigía">
       <figcaption data-es="Vista del familiar — historial y estado en tiempo real" data-en="Family member's view — real-time history and status">Vista del familiar — historial y estado en tiempo real</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell">
-        <span class="ph-icon">📱</span>
-        <span>Screenshot — Detalle de alerta</span>
-      </div>
-      <!-- <img src="img/vigia-alerta.jpg" alt="Detalle de una alerta de riesgo detectada"> -->
+      <img src="img/vigia-alerta.PNG" alt="Detalle de una alerta de riesgo detectada">
       <figcaption data-es="Detalle de llamada — análisis de riesgo y opciones de acción" data-en="Call detail — risk analysis and action options">Detalle de llamada — análisis de riesgo y opciones de acción</figcaption>
     </figure>
   </div>
@@ -274,27 +277,17 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
   </div>
 
 
-  <div class="block block-video reveal">
-    <div class="ph-block ph-vid">
-      <span class="ph-icon">▶</span>
-      <span>Demo en video — próximamente</span>
-    </div>
-
-    <!-- OPCIÓN A: Vimeo -->
-    <!--
-    <div class="video-embed">
-      <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-      </iframe>
-    </div>
-    -->
-
-    <!-- OPCIÓN B: Archivo local -->
-    <!--
-    <video controls>
-      <source src="video/vigia-demo.mp4" type="video/mp4">
-    </video>
-    -->
+  <div class="block block-access reveal">
+    <div class="access-badge" data-es="Beta privada · Lista de espera" data-en="Private beta · Waiting list">Beta privada · Lista de espera</div>
+    <h2 class="access-title" data-es="Obtén acceso al MVP" data-en="Get MVP access">Obtén acceso al MVP</h2>
+    <p class="access-desc" data-es="Vigía está en fase beta privada con cupos limitados. Dejá tu nombre y mail y te contactamos cuando haya lugar disponible." data-en="Vigía is in private beta with limited spots. Leave your name and email and we'll reach out when a spot opens up.">Vigía está en fase beta privada con cupos limitados. Dejá tu nombre y mail y te contactamos cuando haya lugar disponible.</p>
+    <form class="access-form" id="accessForm" novalidate>
+      <input type="text" id="accessName" placeholder="Tu nombre" data-en-placeholder="Your name" autocomplete="name" required>
+      <input type="email" id="accessEmail" placeholder="tu@email.com" autocomplete="email" required>
+      <button type="submit" data-es="Quiero acceso →" data-en="I want access →">Quiero acceso →</button>
+    </form>
+    <p class="access-note" data-es="Sin spam. Solo te avisamos cuando haya un cupo." data-en="No spam. We'll only reach out when a spot opens.">Sin spam. Solo te avisamos cuando haya un cupo.</p>
+    <p class="access-success" id="accessSuccess" data-es="✓ Recibido — te contactamos pronto." data-en="✓ Got it — we'll be in touch soon.">✓ Recibido — te contactamos pronto.</p>
   </div>
 
 
@@ -380,6 +373,24 @@ function applyLang(lang) {
   btnLang.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 btnLang.addEventListener('click', () => { applyLang(currentLang === 'es' ? 'en' : 'es'); });
+
+const nameInput = document.getElementById('accessName');
+const emailInput = document.getElementById('accessEmail');
+function updatePlaceholders(lang) {
+  nameInput.placeholder = lang === 'en' ? 'Your name' : 'Tu nombre';
+}
+const origApplyLang = applyLang;
+btnLang.addEventListener('click', () => { updatePlaceholders(currentLang); });
+
+document.getElementById('accessForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  if (!name || !email) return;
+  window.location.href = 'mailto:hola@danimartinez.dev?subject=Acceso%20MVP%20Vig%C3%ADa&body=Nombre%3A%20' + encodeURIComponent(name) + '%0AEmail%3A%20' + encodeURIComponent(email);
+  this.style.display = 'none';
+  document.getElementById('accessSuccess').style.display = 'block';
+});
 </script>
 <script src="js/image-helper.js"></script>
 </body>
