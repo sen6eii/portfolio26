@@ -76,18 +76,18 @@ html.dark .icon-moon { display: none; }
 .block-text p { font-size: 0.95rem; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
 .block-text p:last-child { margin-bottom: 0; }
 .block-image { margin: 0; }
-.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.block-image img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; aspect-ratio: 16/9; object-fit: cover; }
 .block-image figcaption { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-4); text-align: center; margin-top: 12px; margin-bottom: 16px; }
 .block-grid { display: grid; gap: 12px; }
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 .block-grid figure { margin: 0; }
-.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+.block-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; aspect-ratio: 4/3; object-fit: cover; }
 .block-grid figcaption { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--text-4); margin-top: 8px; margin-bottom: 16px; text-align: center; }
 .video-embed { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .block-video video { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
-.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 0; }
+.block-quote { border-left: 2px solid var(--accent); padding: 4px 0 4px 32px; margin: 48px 0; }
 .block-quote p { font-family: 'Satoshi', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--white); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 14px; }
 .block-quote cite { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-3); font-style: normal; }
 .block-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -196,11 +196,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
   </div>
 
   <figure class="block block-image reveal">
-    <div class="ph-block ph-img">
-      <span class="ph-icon">🖼</span>
-      <span>Reemplazar con &lt;img src="img/tu-imagen.jpg"&gt;</span>
-    </div>
-    <!-- <img src="img/tu-imagen.jpg" alt="descripción"> -->
+    <img src="img/vista.PNG" alt="Vista general del flujo de Totem Café">
     <figcaption data-es="Vista general del flujo — selección, personalización, pago digital y retiro automático" data-en="General flow overview — selection, customization, digital payment and automatic pickup">Vista general del flujo — selección, personalización, pago digital y retiro automático</figcaption>
   </figure>
 
@@ -212,13 +208,11 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
   <div class="block block-grid grid-2 reveal">
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-1.jpg" alt=""> -->
+      <img src="img/pantallaseleccion.png" alt="Pantalla de selección">
       <figcaption data-es="Pantalla de selección — botones de gran formato y jerarquía visual clara" data-en="Selection screen — large-format buttons and clear visual hierarchy">Pantalla de selección — botones de gran formato y jerarquía visual clara</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">📱</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-2.jpg" alt=""> -->
+      <img src="img/confirmacionpedido.png" alt="Confirmación del pedido">
       <figcaption data-es="Confirmación del pedido — estado visible durante todo el flujo" data-en="Order confirmation — status visible throughout the entire flow">Confirmación del pedido — estado visible durante todo el flujo</figcaption>
     </figure>
   </div>
@@ -230,18 +224,15 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
   <div class="block block-grid grid-3 reveal">
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 1</span></div>
-      <!-- <img src="img/screen-a.jpg" alt=""> -->
+      <img src="img/wireframelofi.png" alt="Wireframe low-fi">
       <figcaption data-es="Wireframe low-fi — estructura inicial del flujo" data-en="Lo-fi wireframe — initial flow structure">Wireframe low-fi — estructura inicial del flujo</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 2</span></div>
-      <!-- <img src="img/screen-b.jpg" alt=""> -->
+      <img src="img/prototipo1.png" alt="Prototipo intermedio">
       <figcaption data-es="Iteración intermedia — validación de jerarquía y componentes" data-en="Mid iteration — hierarchy and component validation">Iteración intermedia — validación de jerarquía y componentes</figcaption>
     </figure>
     <figure>
-      <div class="ph-block ph-cell"><span class="ph-icon">🖥</span><span>Screenshot 3</span></div>
-      <!-- <img src="img/screen-c.jpg" alt=""> -->
+      <img src="img/hifi.png" alt="Pantalla final high-fi">
       <figcaption data-es="Pantalla final high-fi — versión lista para producción" data-en="Final hi-fi screen — production-ready version">Pantalla final high-fi — versión lista para producción</figcaption>
     </figure>
   </div>
@@ -250,7 +241,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
     <h2 class="block-title" data-es="Simplificar sin perder claridad" data-en="Simplify without losing clarity">Simplificar sin perder claridad</h2>
     <p data-es="La decisión más difícil fue organizar la jerarquía entre los cuatro momentos del flujo: selección, personalización, pago y retiro. En un contexto de alta demanda, la sobrecarga cognitiva no es teórica — ocurre cuando alguien está apurado, hay gente detrás esperando y la pantalla le presenta demasiadas decisiones a la vez." data-en="The hardest decision was organizing the hierarchy across the four moments of the flow: selection, customization, payment, and pickup. In a high-demand context, cognitive overload isn't theoretical — it happens when someone is in a hurry, there's a line behind them, and the screen presents too many decisions at once.">La decisión más difícil fue organizar la jerarquía entre los cuatro momentos del flujo: selección, personalización, pago y retiro. En un contexto de alta demanda, la sobrecarga cognitiva no es teórica — ocurre cuando alguien está apurado, hay gente detrás esperando y la pantalla le presenta demasiadas decisiones a la vez.</p>
     <p data-es="La respuesta fue mantener el estado del pedido siempre visible y reducir las decisiones por pantalla al mínimo posible. Botones grandes, navegación estrictamente lineal, feedback constante en cada acción. El sistema tenía que generar confianza en sí mismo — porque no hay nadie al lado para resolverlo." data-en="The answer was keeping the order status always visible and reducing decisions per screen to the minimum possible. Large buttons, strictly linear navigation, constant feedback on every action. The system had to build confidence in itself — because there's no one nearby to help resolve it.">La respuesta fue mantener el estado del pedido siempre visible y reducir las decisiones por pantalla al mínimo posible. Botones grandes, navegación estrictamente lineal, feedback constante en cada acción. El sistema tenía que generar confianza en sí mismo — porque no hay nadie al lado para resolverlo.</p>
-    <p data-es='El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a>' data-en='The complete case study — wireframes, design decisions, interactive flow, and final screens — is published on Behance. <a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View full case study →</a>'>El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <!-- reemplazá # con la URL real de Behance --><a href="#" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a></p>
+    <p data-es='El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <a href="https://www.behance.net/gallery/248242035/Self-checkout-UI-Design" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a>' data-en='The complete case study — wireframes, design decisions, interactive flow, and final screens — is published on Behance. <a href="https://www.behance.net/gallery/248242035/Self-checkout-UI-Design" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">View full case study →</a>'>El caso completo — wireframes, decisiones de diseño, flujo interactivo y pantallas finales — está publicado en Behance. <a href="https://www.behance.net/gallery/248242035/Self-checkout-UI-Design" target="_blank" style="color: var(--accent); font-weight: 500; text-decoration: none;">Ver case study completo →</a></p>
   </div>
 
   <div class="block block-tags content-narrow reveal">
