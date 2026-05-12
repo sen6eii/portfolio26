@@ -416,6 +416,14 @@ section {
   aspect-ratio: auto;
   min-height: 320px;
 }
+.project-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .project-img-placeholder {
   width: 100%;
@@ -932,10 +940,7 @@ footer {
     <!-- Vigía — featured -->
     <a class="project-card featured reveal" href="proyecto-vigia.html">
       <div class="project-img">
-        <div class="project-img-placeholder">
-          <span class="placeholder-icon">🛡️</span>
-          <span class="placeholder-text" data-es="Reemplazar con mockup" data-en="Replace with mockup">Reemplazar con mockup</span>
-        </div>
+        <img src="img/vigia-portada.png" alt="Vigía">
         <div class="project-hover-overlay"></div>
       </div>
       <div class="project-info">
@@ -952,10 +957,7 @@ footer {
     <!-- Totem Café -->
     <a class="project-card reveal" href="proyecto-totem.html">
       <div class="project-img">
-        <div class="project-img-placeholder">
-          <span class="placeholder-icon">☕</span>
-          <span class="placeholder-text" data-es="Reemplazar con mockup" data-en="Replace with mockup">Reemplazar con mockup</span>
-        </div>
+        <img src="img/totem-portada.png" alt="Totem Café">
         <div class="project-hover-overlay"></div>
       </div>
       <div class="project-info">
@@ -972,10 +974,7 @@ footer {
     <!-- Soundboard -->
     <a class="project-card reveal" href="proyecto-soundboard.html">
       <div class="project-img">
-        <div class="project-img-placeholder">
-          <span class="placeholder-icon">🎵</span>
-          <span class="placeholder-text" data-es="Reemplazar con mockup" data-en="Replace with mockup">Reemplazar con mockup</span>
-        </div>
+        <img src="img/sounboard-portada.png" alt="Soundboard">
         <div class="project-hover-overlay"></div>
       </div>
       <div class="project-info">
@@ -992,10 +991,7 @@ footer {
     <!-- Biblat -->
     <a class="project-card reveal" href="proyecto-biblat.html">
       <div class="project-img">
-        <div class="project-img-placeholder">
-          <span class="placeholder-icon">📚</span>
-          <span class="placeholder-text" data-es="Reemplazar con mockup" data-en="Replace with mockup">Reemplazar con mockup</span>
-        </div>
+        <img src="img/biblat-portada.png" alt="Biblat">
         <div class="project-hover-overlay"></div>
       </div>
       <div class="project-info">
@@ -1010,8 +1006,12 @@ footer {
     </a>
 
     <!-- Lendit -->
-    <a class="project-card featured reveal" href="proyecto-lendit.html" style="grid-template-columns: 1fr 1.2fr;">
-      <div class="project-info" style="padding: 40px 36px; display:flex; flex-direction:column; justify-content:center;">
+    <a class="project-card reveal" href="proyecto-lendit.html">
+      <div class="project-img">
+        <img src="img/lendit-portada.png" alt="Lendit">
+        <div class="project-hover-overlay"></div>
+      </div>
+      <div class="project-info">
         <div class="project-tag">Mobile · UX · UI Design</div>
         <h3 class="project-name">Lendit</h3>
         <p class="project-desc" data-es="App para compartir bienes entre comunidades. Un diseño centrado en la confianza, la economía colaborativa y la reducción del consumo innecesario." data-en="App for sharing goods between communities. A design centered on trust, the collaborative economy, and reducing unnecessary consumption.">App para compartir bienes entre comunidades. Un diseño centrado en la confianza, la economía colaborativa y la reducción del consumo innecesario.</p>
@@ -1019,13 +1019,6 @@ footer {
           <span class="project-status status-concept"><span class="status-dot"></span><span data-es="Proyecto académico" data-en="Academic project">Proyecto académico</span></span>
           <span class="project-arrow">→</span>
         </div>
-      </div>
-      <div class="project-img">
-        <div class="project-img-placeholder">
-          <span class="placeholder-icon">🤝</span>
-          <span class="placeholder-text" data-es="Reemplazar con mockup" data-en="Replace with mockup">Reemplazar con mockup</span>
-        </div>
-        <div class="project-hover-overlay"></div>
       </div>
     </a>
 
