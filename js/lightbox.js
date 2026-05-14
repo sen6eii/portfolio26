@@ -9,8 +9,9 @@
       cursor: zoom-out;
       opacity: 0; transition: opacity 0.22s ease;
       padding: 24px;
+      pointer-events: none;
     }
-    .lb-overlay.lb-open { opacity: 1; }
+    .lb-overlay.lb-open { opacity: 1; pointer-events: auto; }
     .lb-img {
       max-width: 90vw; max-height: 88vh;
       object-fit: contain;

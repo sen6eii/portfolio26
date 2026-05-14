@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Daniel Martínez — Diseñador Digital y Frontend Developer con visión de producto. Portfolio de proyectos de UX, UI y desarrollo frontend desde Montevideo, Uruguay.">
+<link rel="icon" type="image/png" href="img/favicon.PNG">
 <title>Daniel Martínez — Diseñador Digital & Frontend Developer</title>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -594,7 +596,7 @@ section {
 .services-cards {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 16px;
 }
 
 .service-card {
@@ -650,6 +652,36 @@ section {
   border: 1px solid var(--accent-border);
   padding: 3px 8px;
   border-radius: 3px;
+}
+.service-capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.service-capability {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.54rem;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.service-card:hover .service-capability { color: var(--text-2); }
+.service-capability::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.45;
+  flex-shrink: 0;
 }
 
 /* ABOUT */
@@ -1031,30 +1063,31 @@ footer {
     <div class="services-left reveal">
       <div class="section-label" data-es="Servicios" data-en="Services">Servicios</div>
       <h2 class="services-title" data-es="Qué puedo hacer por vos." data-en="What I can do for you.">Qué puedo hacer por vos.</h2>
-      <p class="services-sub" data-es="No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto — potenciado con IA, vibe coding y agentes que multiplican el ritmo sin sacrificar el criterio." data-en="I don't separate design from development, or development from business. I build from problem to product — powered by AI, vibe coding, and agents that multiply speed without sacrificing judgment.">No separo el diseño del desarrollo ni el desarrollo del negocio. Construyo desde el problema hasta el producto — potenciado con IA, vibe coding y agentes que multiplican el ritmo sin sacrificar el criterio.</p>
       <a href="#contacto" class="btn-primary" data-es="Hablemos →" data-en="Let's talk →">Hablemos →</a>
     </div>
     <div class="services-cards reveal">
       <div class="service-card">
-        <span class="service-icon">⬡</span>
-        <div class="service-name" data-es="Diseño & Desarrollo de Producto" data-en="Product Design & Development">Diseño & Desarrollo de Producto</div>
-        <div class="service-desc" data-es="Del problema al producto terminado. Diseño la UX, prototipo en Figma, construyo la interfaz y la deployeo — con IA y vibe coding como parte real del flujo, no como complemento." data-en="From problem to finished product. I design the UX, prototype in Figma, build the interface, and deploy it — with AI and vibe coding as a real part of the workflow, not an afterthought.">Del problema al producto terminado. Diseño la UX, prototipo en Figma, construyo la interfaz y la deployeo — con IA y vibe coding como parte real del flujo, no como complemento.</div>
-        <div class="service-tools">
-          <span class="service-tool">Claude</span>
-          <span class="service-tool">Figma</span>
-          <span class="service-tool">Cursor</span>
-          <span class="service-tool">React</span>
-          <span class="service-tool">Windsurf</span>
+        <div class="service-name" data-es="Diseño y Desarrollo de Producto" data-en="Product Design & Development">Diseño y Desarrollo de Producto</div>
+        <div class="service-desc" data-es="Ayudo a organizaciones a transformar problemas complejos en soluciones digitales escalables mediante estrategia de producto, UX e implementación técnica impulsada por IA." data-en="I help organizations turn complex problems into scalable digital solutions through product strategy, UX, and AI-powered technical implementation.">Ayudo a organizaciones a transformar problemas complejos en soluciones digitales escalables mediante estrategia de producto, UX e implementación técnica impulsada por IA.</div>
+        <div class="service-capabilities">
+          <span class="service-capability" data-es="Diseño de Producto End-to-End" data-en="End-to-End Product Design">Diseño de Producto End-to-End</span>
+          <span class="service-capability" data-es="UX Centrado en las Personas" data-en="Human-Centered UX">UX Centrado en las Personas</span>
+          <span class="service-capability" data-es="Desarrollo Asistido por IA" data-en="AI-Assisted Development">Desarrollo Asistido por IA</span>
+          <span class="service-capability" data-es="Sistemas Frontend Robustos" data-en="Robust Frontend Systems">Sistemas Frontend Robustos</span>
+          <span class="service-capability" data-es="Implementación Técnica" data-en="Technical Implementation">Implementación Técnica</span>
+          <span class="service-capability" data-es="Experiencias Digitales Escalables" data-en="Scalable Digital Experiences">Experiencias Digitales Escalables</span>
         </div>
       </div>
       <div class="service-card">
-        <span class="service-icon">◎</span>
         <div class="service-name" data-es="Consultoría Digital" data-en="Digital Consulting">Consultoría Digital</div>
-        <div class="service-desc" data-es="Análisis de productos, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología. Incluye evaluación de automatizaciones y agentes de IA aplicables a tu producto o proceso." data-en="Product analysis, improvement proposals, and guidance on design and technology decisions. Includes assessment of AI automations and agents applicable to your product or workflow.">Análisis de productos, propuestas de mejora y acompañamiento en decisiones de diseño y tecnología. Incluye evaluación de automatizaciones y agentes de IA aplicables a tu producto o proceso.</div>
-        <div class="service-tools">
-          <span class="service-tool">Claude</span>
-          <span class="service-tool">n8n</span>
-          <span class="service-tool">Agentes IA</span>
+        <div class="service-desc" data-es="Evaluación de sistemas, procesos y experiencias digitales para optimizar usabilidad, eficiencia operativa y capacidad de crecimiento." data-en="Evaluation of digital systems, processes, and experiences to optimize usability, operational efficiency, and growth capacity.">Evaluación de sistemas, procesos y experiencias digitales para optimizar usabilidad, eficiencia operativa y capacidad de crecimiento.</div>
+        <div class="service-capabilities">
+          <span class="service-capability" data-es="Auditorías de Producto Digital" data-en="Digital Product Audits">Auditorías de Producto Digital</span>
+          <span class="service-capability" data-es="Análisis Estratégico de UX" data-en="Strategic UX Insights">Análisis Estratégico de UX</span>
+          <span class="service-capability" data-es="Mapeo de Oportunidades con IA" data-en="AI Opportunity Mapping">Mapeo de Oportunidades con IA</span>
+          <span class="service-capability" data-es="Análisis de Sistemas y Flujos" data-en="System & Flow Analysis">Análisis de Sistemas y Flujos</span>
+          <span class="service-capability" data-es="Soporte en Decisiones Tecnológicas" data-en="Technology Decision Support">Soporte en Decisiones Tecnológicas</span>
+          <span class="service-capability" data-es="Revisión de Crecimiento y Escalabilidad" data-en="Growth & Scalability Review">Revisión de Crecimiento y Escalabilidad</span>
         </div>
       </div>
     </div>
@@ -1066,7 +1099,7 @@ footer {
   <div class="about-inner">
     <div class="reveal">
       <div class="section-label" data-es="Sobre mí" data-en="About me">Sobre mí</div>
-      <h2 class="about-title" data-es="Diseño + Código + Producto." data-en="Design + Code + Product.">Diseño + Código + Producto.</h2>
+      <h2 class="about-title" data-es="El impulso de crear." data-en="The Drive to Create.">El impulso de crear.</h2>
       <p class="about-text" data-es="Desde que tengo memoria, mi forma de estar en el mundo fue creando cosas. No importaba si el público era real o imaginario. Siempre había una intención de hacer algo que valiera la pena ver, escuchar o sentir. Ese impulso nunca desapareció, solo fue encontrando nuevos formatos. La tecnología, el diseño, el código, fueron motores para avanzar en el autodescubrimiento. Es así que cada etapa me fue aclarando lo que no era: ni un desarrollador puro, ni un diseñador gráfico tradicional." data-en="For as long as I can remember, my way of being in the world was creating things. It didn't matter whether the audience was real or imaginary. There was always an intention to make something worth seeing, hearing, or feeling. That impulse never disappeared — it just kept finding new formats. Technology, design, and code became engines for self-discovery. Each stage clarified what I wasn't: neither a pure developer nor a traditional graphic designer.">
         Desde que tengo memoria, mi forma de estar en el mundo fue creando cosas. No importaba si el público era real o imaginario. Siempre había una intención de hacer algo que valiera la pena ver, escuchar o sentir.
         Ese impulso nunca desapareció, solo fue encontrando nuevos formatos. La tecnología, el diseño, el código, fueron motores para avanzar en el autodescubrimiento. Es así que cada etapa me fue aclarando lo que no era: ni un desarrollador puro, ni un diseñador gráfico tradicional.
@@ -1093,7 +1126,7 @@ footer {
     </div>
     <div class="about-right reveal">
       <div class="about-photo">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQFje8Uj_7bSpg/profile-displayphoto-crop_800_800/B4DZsjLSQTHkAM-/0/1765821720341?e=1778112000&v=beta&t=CL-u79oHdbS9YwWFIwmC30kgXZNe6v52wKuqi6RI8Bw" alt="Daniel Martínez" style="width:100%; height:100%; object-fit:cover;">
+          <img src="img/foto.jfif" alt="Daniel Martínez" style="width:100%; height:100%; object-fit:cover;">
       </div>
       <div class="about-stats">
         <div class="stat">
